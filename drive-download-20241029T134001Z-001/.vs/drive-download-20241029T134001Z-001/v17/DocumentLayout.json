@@ -1,0 +1,174 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\Form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\Form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\Form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\Function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\DataProcess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BTLBinh\\DataProcess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 555,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form5.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form5.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Form5.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form5.cs",
+              "RelativeToolTip": "BTLBinh\\Form5.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:14:14.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form3.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Form3.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form3.cs",
+              "RelativeToolTip": "BTLBinh\\Form3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:14:11.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form4.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Form4.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form4.cs",
+              "RelativeToolTip": "BTLBinh\\Form4.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:14:07.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form2.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Form2.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form2.cs",
+              "RelativeToolTip": "BTLBinh\\Form2.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAAANIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:38:08.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Function.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Function.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Function.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Function.cs",
+              "RelativeToolTip": "BTLBinh\\Function.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAEUAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:37:52.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DataProcess.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\DataProcess.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\DataProcess.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\DataProcess.cs",
+              "RelativeToolTip": "BTLBinh\\DataProcess.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:27:44.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form1.Designer.cs",
+              "RelativeToolTip": "BTLBinh\\Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:27:06.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form1.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Form1.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\drive-download-20241029T134001Z-001\\BTLBinh\\Form1.cs",
+              "RelativeToolTip": "BTLBinh\\Form1.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAAAF8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:27:00.054Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 17,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
