@@ -46,16 +46,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgvDanhSachSp = new System.Windows.Forms.DataGridView();
+            this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.txtMaHDB = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
             this.btnNhanVien = new System.Windows.Forms.Button();
+            this.btnChiTiet = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachSp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -220,17 +221,17 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Ngày Bán";
             // 
-            // dgvDanhSachSp
+            // dgvDanhSach
             // 
-            this.dgvDanhSachSp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSachSp.Location = new System.Drawing.Point(34, 249);
-            this.dgvDanhSachSp.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvDanhSachSp.Name = "dgvDanhSachSp";
-            this.dgvDanhSachSp.RowHeadersWidth = 51;
-            this.dgvDanhSachSp.RowTemplate.Height = 24;
-            this.dgvDanhSachSp.Size = new System.Drawing.Size(766, 220);
-            this.dgvDanhSachSp.TabIndex = 11;
-            this.dgvDanhSachSp.SelectionChanged += new System.EventHandler(this.DgvDanhSach_SelectionChanged);
+            this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Location = new System.Drawing.Point(34, 249);
+            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.RowHeadersWidth = 51;
+            this.dgvDanhSach.RowTemplate.Height = 24;
+            this.dgvDanhSach.Size = new System.Drawing.Size(766, 220);
+            this.dgvDanhSach.TabIndex = 11;
+            this.dgvDanhSach.SelectionChanged += new System.EventHandler(this.DgvDanhSach_SelectionChanged);
             // 
             // txtMaHDB
             // 
@@ -277,11 +278,22 @@
             this.btnNhanVien.UseVisualStyleBackColor = true;
             this.btnNhanVien.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.Location = new System.Drawing.Point(497, 183);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnChiTiet.TabIndex = 31;
+            this.btnChiTiet.Text = "Chi Tiết";
+            this.btnChiTiet.UseVisualStyleBackColor = true;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 513);
+            this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.dtpNgayBan);
             this.Controls.Add(this.txtMaKH);
@@ -293,7 +305,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvDanhSachSp);
+            this.Controls.Add(this.dgvDanhSach);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -304,7 +316,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachSp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,7 +340,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgvDanhSachSp;
+        private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.TextBox txtMaHDB;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtTongTien;
@@ -337,5 +349,6 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhàCungCấpToolStripMenuItem;
+        private System.Windows.Forms.Button btnChiTiet;
     }
 }

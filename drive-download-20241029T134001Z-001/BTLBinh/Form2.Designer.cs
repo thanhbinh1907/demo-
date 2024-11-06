@@ -54,6 +54,7 @@
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnNhaCC = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
+            this.btnChiTiet = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -286,11 +287,22 @@
             this.btnNhanVien.Text = "...";
             this.btnNhanVien.UseVisualStyleBackColor = true;
             // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.Location = new System.Drawing.Point(494, 197);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnChiTiet.TabIndex = 30;
+            this.btnChiTiet.Text = "Chi tiết ";
+            this.btnChiTiet.UseVisualStyleBackColor = true;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 513);
+            this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.btnNhaCC);
             this.Controls.Add(this.txtTongTien);
@@ -349,5 +361,6 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhàCungCấpToolStripMenuItem;
+        private System.Windows.Forms.Button btnChiTiet;
     }
 }

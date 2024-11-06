@@ -498,5 +498,29 @@ namespace BTLBinh
             }
 
         }
+        public DataTable GetChiTietHD(string maHDN)
+        {
+            // Kiểm tra mã hóa đơn không rỗng
+            if (string.IsNullOrWhiteSpace(maHDN))
+            {
+                MessageBox.Show("Mã hóa đơn không hợp lệ.");
+                return null;
+            }
+
+            // Câu truy vấn để lấy chi tiết hóa đơn
+            string query = $"SELECT * FROM CHITIETHDN WHERE MaHDN = '{maHDN}'";
+
+            try
+            {
+                // Thực hiện truy vấn và trả về DataTable
+                DataTable dt = dataProcess.DataConnect(query);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lấy chi tiết hóa đơn: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

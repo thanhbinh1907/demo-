@@ -19,7 +19,7 @@ namespace BTLBinh
         {
             InitializeComponent();
             List<TextBox> list = new List<TextBox> { txtMaHDB, txtMaNV, txtMaKH, txtTongTien };
-            function = new Function(dataProcess, dgvDanhSachSp, list, "HOADONBAN", null, dtpNgayBan, null);
+            function = new Function(dataProcess, dgvDanhSach, list, "HOADONBAN", null, dtpNgayBan, null);
             function.LoadData();
             SetTextBoxReadOnly(true);
             txtMaHDB.ReadOnly = true;
@@ -213,6 +213,26 @@ namespace BTLBinh
                     isEditing = false; // Đánh dấu không còn ở chế độ chỉnh sửa
                     dtpNgayBan.Enabled = false;
                 }
+            }
+        }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            if (dgvDanhSach.SelectedRows.Count > 0)
+            {
+                string maHDB = dgvDanhSach.SelectedRows[0].Cells["MaHDB"].Value.ToString(); // Lấy mã hóa đơn
+
+                // Tạo một instance của Form6 với mã hóa đơn
+                Form6 formChiTiet = new Form6(maHDB);
+
+                // Gọi phương thức để nạp chi tiết hóa đơn
+                formChiTiet.LoadChiTiet(maHDB);
+
+                formChiTiet.ShowDialog(); // Hiển thị form chi tiết hóa đơn
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một hóa đơn để xem chi tiết.");
             }
         }
     }

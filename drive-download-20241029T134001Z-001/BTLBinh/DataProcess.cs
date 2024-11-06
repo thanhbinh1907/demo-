@@ -40,5 +40,10 @@ namespace BTLBinh
                 }
             }
         }
+        public DataTable GetChiTietByMaHDN(string maHDN)
+        {
+            string query = $"SELECT * FROM CHITIET WHERE MaHDN = '{maHDN}'"; // Thay đổi tên bảng và điều kiện cho phù hợp
+            return DataConnect(query); // Gọi DataConnect để lấy dữ liệu
+        }
     }
 }

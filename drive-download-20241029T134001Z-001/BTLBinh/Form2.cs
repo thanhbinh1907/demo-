@@ -28,8 +28,8 @@ namespace BTLBinh
         }
         private void DgvDanhSach_SelectionChanged(object sender, EventArgs e)
         {
-                SetTextBoxReadOnly(true); // Đặt lại TextBox về chế độ chỉ đọc
-                dtpNgayNhap.Enabled = false; // Vô hiệu hóa DateTimePicker
+            SetTextBoxReadOnly(true); // Đặt lại TextBox về chế độ chỉ đọc
+            dtpNgayNhap.Enabled = false; // Vô hiệu hóa DateTimePicker
         }
         private void SetTextBoxReadOnly(bool isReadOnly)
         {
@@ -215,6 +215,11 @@ namespace BTLBinh
                 SetTextBoxReadOnly(true);
                 dtpNgayNhap.Value = DateTime.Now;
             }
+        }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
