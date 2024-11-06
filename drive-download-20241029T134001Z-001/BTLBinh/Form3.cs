@@ -24,6 +24,7 @@ namespace BTLBinh
             SetTextBoxReadOnly(true);
             txtMaHDB.ReadOnly = true;
             dtpNgayBan.Enabled = false;
+            txtTongTien.ReadOnly = true;
         }
         private void DgvDanhSach_SelectionChanged(object sender, EventArgs e)
         {
@@ -35,7 +36,7 @@ namespace BTLBinh
         }
         private void SetTextBoxReadOnly(bool isReadOnly)
         {
-            foreach (var textBox in new List<TextBox> { txtMaNV, txtTongTien, txtMaKH })
+            foreach (var textBox in new List<TextBox> { txtMaNV, txtMaKH })
             {
                 textBox.ReadOnly = isReadOnly;
             }
