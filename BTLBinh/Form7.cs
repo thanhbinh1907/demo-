@@ -18,6 +18,8 @@ namespace BTLBinh
         private string maHDN;
         private int SoLuongCu;
         private decimal KhuyenMaiCu;
+        private string maHDTro;
+
         public Form7(string maHDN)
         {
             InitializeComponent();
@@ -31,6 +33,9 @@ namespace BTLBinh
             cbbMaSP.Enabled = false;
             SetTextBoxReadOnly(true);
             txtThanhTien.ReadOnly = true;
+
+            // Gọi phương thức để kiểm tra và thêm hóa đơn nếu cần
+            CheckAndAddChiTietHoaDon(maHDN);
         }
         private void dgvDanhSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -137,10 +142,6 @@ namespace BTLBinh
                     giaSP = Convert.ToDecimal(dt.Rows[0]["GiaNhap"]); // Lấy đơn giá
                     khuyenMai = Convert.ToDecimal(dt.Rows[0]["KhuyenMai"]); // Lấy khuyến mãi
                 }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy thông tin cho mã sản phẩm đã chọn.");
-                }
             }
             catch (Exception ex)
             {
@@ -244,14 +245,16 @@ namespace BTLBinh
         }
         private void AddChiTietHoaDon(string maHDN, string maSP, int soLuong, decimal gia, decimal khuyenMai)
         {
-            if (string.IsNullOrWhiteSpace(maHDN) || string.IsNullOrWhiteSpace(maSP))
+            string maHDNToUse = !string.IsNullOrWhiteSpace(maHDTro) ? maHDTro : maHDN;
+
+            if (string.IsNullOrWhiteSpace(maHDNToUse))
             {
-                MessageBox.Show("Mã hóa đơn hoặc mã sản phẩm không hợp lệ.");
+                MessageBox.Show("Mã hóa đơn không hợp lệ.");
                 return;
             }
 
-            // Kiểm tra xem sản phẩm đã tồn tại trong bảng CHITIETHDB chưa
-            string checkQuery = $"SELECT SoLuong FROM CHITIETHDN WHERE MaHDN = '{maHDN}' AND MaSP = '{maSP}'";
+            // Kiểm tra xem sản phẩm đã tồn tại trong bảng CHITIETHDN chưa
+            string checkQuery = $"SELECT SoLuong FROM CHITIETHDN WHERE MaHDN = '{maHDNToUse}' AND MaSP = '{maSP}'";
 
             try
             {
@@ -259,14 +262,14 @@ namespace BTLBinh
 
                 if (dtCheck != null && dtCheck.Rows.Count > 0)
                 {
-                    // Sản phẩm đã tồn tại, cập nhật số lượng (thêm thêm vào số lượng hiện tại)
+                    // Sản phẩm đã tồn tại, cập nhật số lượng
                     int existingQuantity = Convert.ToInt32(dtCheck.Rows[0]["SoLuong"]);
                     int newQuantity = existingQuantity + soLuong; // Cộng thêm số lượng mới
 
                     decimal thanhTien = (gia - (gia * khuyenMai / 100)) * newQuantity;
 
                     // Cập nhật số lượng và thành tiền
-                    string updateQuery = $"UPDATE CHITIETHDN SET SoLuong = {newQuantity}, ThanhTien = {thanhTien}, KhuyenMai = {khuyenMai} WHERE MaHDN = '{maHDN}' AND MaSP = '{maSP}'";
+                    string updateQuery = $"UPDATE CHITIETHDN SET SoLuong = {newQuantity}, ThanhTien = {thanhTien}, KhuyenMai = {khuyenMai} WHERE MaHDN = '{maHDNToUse}' AND MaSP = '{maSP}'";
                     dataProcess.ExecuteQuery(updateQuery);
                     MessageBox.Show("Cập nhật số lượng sản phẩm thành công.");
                 }
@@ -274,13 +277,13 @@ namespace BTLBinh
                 {
                     // Sản phẩm chưa tồn tại, thêm mới vào bảng
                     decimal thanhTien = (gia - (gia * khuyenMai / 100)) * soLuong;
-                    string insertQuery = $"INSERT INTO CHITIETHDB (MaHDN, MaSP, SoLuong, ThanhTien, KhuyenMai) VALUES ('{maHDN}', '{maSP}', {soLuong}, {thanhTien}, {khuyenMai})";
+                    string insertQuery = $"INSERT INTO CHITIETHDN (MaHDN, MaSP, SoLuong, ThanhTien, KhuyenMai) VALUES ('{maHDNToUse}', '{maSP}', {soLuong}, {thanhTien}, {khuyenMai})";
                     dataProcess.ExecuteQuery(insertQuery);
                     MessageBox.Show("Thêm sản phẩm thành công.");
                 }
 
                 // Tải lại chi tiết hóa đơn để cập nhật dữ liệu mới
-                LoadChiTiet(maHDN);
+                LoadChiTiet(maHDNToUse);
                 ClearTextBoxes();
             }
             catch (Exception ex)
@@ -300,6 +303,51 @@ namespace BTLBinh
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi cập nhật tổng tiền vào hóa đơn: {ex.Message}");
+            }
+        }
+        public void CheckAndAddChiTietHoaDon(string maHDN)
+        {
+            // Kiểm tra xem mã hóa đơn đã tồn tại trong bảng HOADONNHAP chưa
+            string checkHoaDonQuery = $"SELECT COUNT(*) FROM HOADONNHAP WHERE MaHDN = '{maHDN}'";
+            int hoaDonCount = 0;
+
+            try
+            {
+                hoaDonCount = Convert.ToInt32(dataProcess.DataConnect(checkHoaDonQuery).Rows[0][0]);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi kiểm tra hóa đơn: {ex.Message}");
+                return;
+            }
+
+            // Nếu mã hóa đơn tồn tại trong bảng HOADONNHAP
+            if (hoaDonCount > 0)
+            {
+                // Kiểm tra xem mã hóa đơn đã tồn tại trong bảng CHITIETHDN chưa
+                string checkChiTietQuery = $"SELECT COUNT(*) FROM CHITIETHDN WHERE MaHDN = '{maHDN}'";
+                int chiTietCount = 0;
+
+                try
+                {
+                    chiTietCount = Convert.ToInt32(dataProcess.DataConnect(checkChiTietQuery).Rows[0][0]);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi kiểm tra chi tiết hóa đơn: {ex.Message}");
+                    return;
+                }
+
+                // Nếu mã hóa đơn chưa tồn tại trong bảng CHITIETHDN, lưu vào biến
+                if (chiTietCount == 0)
+                {
+                    maHDTro = maHDN; // Lưu mã hóa đơn vào biến
+                    MessageBox.Show("Mã hóa đơn đã được lưu và có sẵn trong bảng hóa đơn.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Mã hóa đơn không tồn tại trong bảng hóa đơn.");
             }
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -348,8 +396,11 @@ namespace BTLBinh
                 decimal thanhTien = (gia - (gia * khuyenMai / 100)) * soLuong;
                 txtThanhTien.Text = thanhTien.ToString("N0"); // Hiển thị thành tiền
 
+                // Kiểm tra và thêm mã hóa đơn nếu cần
+                CheckAndAddChiTietHoaDon(maHDN); // Gọi phương thức kiểm tra
+
                 // Thêm sản phẩm vào bảng chi tiết hóa đơn
-                AddChiTietHoaDon(maHDN, maSP, soLuong, gia, khuyenMai);
+                AddChiTietHoaDon(maHDN, maSP, soLuong, gia, khuyenMai); // Sử dụng trực tiếp maHDN
 
                 // Đặt lại trạng thái chỉnh sửa
                 SetTextBoxReadOnly(true);
@@ -470,12 +521,6 @@ namespace BTLBinh
             {
                 MessageBox.Show("Vui lòng chọn một sản phẩm để xóa.");
             }
-        }
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            Form form2 = new Form2();
-            form2.Show();
-            this.Close();
         }
 
         private void btnXuatExcel_Click(object sender, EventArgs e)

@@ -15,7 +15,7 @@ namespace BTLBinh
         public Order()
         {
             InitializeComponent();
-
+            this.FormClosed += (sender, e) => Application.Exit();
             // Dùng cho MenuStrip 
             MenuStripHelper.ApplyHoverEffect(danhMucToolStripMenuItem);
             MenuStripHelper.ApplyHoverEffect(nhapHangToolStripMenuItem);

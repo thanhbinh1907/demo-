@@ -40,10 +40,13 @@ namespace BTLBinh
                 }
             }
         }
-        public DataTable GetChiTietByMaHDN(string maHDN)
+
+        public void CloseConnection(SqlConnection connection)
         {
-            string query = $"SELECT * FROM CHITIET WHERE MaHDN = '{maHDN}'"; // Thay đổi tên bảng và điều kiện cho phù hợp
-            return DataConnect(query); // Gọi DataConnect để lấy dữ liệu
+            if (connection != null && connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+            }
         }
     }
 }

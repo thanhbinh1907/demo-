@@ -19,6 +19,7 @@ namespace BTLBinh
         public Form2()
         {
             InitializeComponent();
+            this.FormClosed += (sender, e) => Application.Exit();
             List<TextBox> list = new List<TextBox> { txtMaHDN, txtMaNV, txtMaNCC, txtTongTien };
             function = new Function(dataProcess, dgvDanhSach, list, "HOADONNHAP", null, dtpNgayNhap, null);
             function.LoadData();
@@ -93,6 +94,9 @@ namespace BTLBinh
                 SetTextBoxReadOnly(false);
                 isEditing = true; // Đánh dấu là đang ở chế độ nhập thông tin
                 ClearTextBoxes(); // Xóa các TextBox để người dùng có thể nhập thông tin mới
+
+                // Đặt giá trị tổng tiền mặc định là 0
+                txtTongTien.Text = "0"; // Thiết lập giá trị tổng tiền về 0
                 dtpNgayNhap.Enabled = true;
             }
             else
@@ -100,9 +104,59 @@ namespace BTLBinh
                 // Lần thứ hai, kiểm tra xem các TextBox đã được điền thông tin chưa
                 if (textBoxes.All(tb => !string.IsNullOrWhiteSpace(tb.Text)))
                 {
-                    // Nếu tất cả các TextBox đã được điền, gọi phương thức Add
+                    string maNV = txtMaNV.Text.Trim(); // Lấy mã nhân viên từ TextBox
+                    string maNCC = txtMaNCC.Text.Trim(); // Lấy mã nhà cung cấp từ TextBox
+
+                    // Kiểm tra mã nhân viên
+                    string checkNVQuery = $"SELECT COUNT(*) FROM NHANVIEN WHERE MaNV = '{maNV}'";
+                    int countNV;
+                    try
+                    {
+                        countNV = Convert.ToInt32(dataProcess.DataConnect(checkNVQuery).Rows[0][0]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi kiểm tra mã nhân viên: {ex.Message}");
+                        return;
+                    }
+
+                    if (countNV == 0)
+                    {
+                        MessageBox.Show("Mã nhân viên không tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Ngừng thực hiện nếu mã nhân viên không tồn tại
+                    }
+
+                    // Kiểm tra mã nhà cung cấp
+                    string checkNCCQuery = $"SELECT COUNT(*) FROM NHACUNGCAP WHERE MaNCC = '{maNCC}'";
+                    int countNCC;
+                    try
+                    {
+                        countNCC = Convert.ToInt32(dataProcess.DataConnect(checkNCCQuery).Rows[0][0]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi kiểm tra mã nhà cung cấp: {ex.Message}");
+                        return;
+                    }
+
+                    if (countNCC == 0)
+                    {
+                        MessageBox.Show("Mã nhà cung cấp không tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Ngừng thực hiện nếu mã nhà cung cấp không tồn tại
+                    }
+
+                    // Kiểm tra mã hóa đơn đã tồn tại hay chưa
+                    string maHDN = txtMaHDN.Text.Trim(); // Lấy mã hóa đơn từ TextBox
+                    if (function.CheckExists("HOADONNHAP", "MaHDN", maHDN))
+                    {
+                        // Nếu mã hóa đơn đã tồn tại, thông báo cho người dùng
+                        MessageBox.Show("Mã hóa đơn đã tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Ngừng thực hiện nếu trùng
+                    }
+
+                    // Nếu tất cả các TextBox đã được điền và mã hóa đơn không trùng, gọi phương thức Add
                     function.Add();
-                    MessageBox.Show("Thêm sản phẩm thành công!");
+                    MessageBox.Show("Thêm hóa đơn thành công!");
 
                     // Thiết lập lại trạng thái
                     SetTextBoxReadOnly(true);
@@ -200,7 +254,7 @@ namespace BTLBinh
         private void btnXoa_Click(object sender, EventArgs e)
         {
             // Xác nhận trước khi xóa
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này không?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa hóa đơn này không?", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 // Gọi phương thức Delete từ Function để xóa sản phẩm
@@ -236,12 +290,16 @@ namespace BTLBinh
 
                 formChiTiet.Show(); // Hiển thị form chi tiết hóa đơn
 
-                this.Close();
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn một hóa đơn để xem chi tiết.");
             }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            function.LoadData();
         }
     }
 }

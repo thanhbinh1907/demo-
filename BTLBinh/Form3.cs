@@ -18,6 +18,7 @@ namespace BTLBinh
         public Form3()
         {
             InitializeComponent();
+            this.FormClosed += (sender, e) => Application.Exit();
             List<TextBox> list = new List<TextBox> { txtMaHDB, txtMaNV, txtMaKH, txtTongTien };
             function = new Function(dataProcess, dgvDanhSach, list, "HOADONBAN", null, dtpNgayBan, null);
             function.LoadData();
@@ -58,10 +59,6 @@ namespace BTLBinh
             }
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
         private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
@@ -105,22 +102,97 @@ namespace BTLBinh
                 SetTextBoxReadOnly(false);
                 isEditing = true; // Đánh dấu là đang ở chế độ nhập thông tin
                 ClearTextBoxes(); // Xóa các TextBox để người dùng có thể nhập thông tin mới
+
+                // Đặt giá trị tổng tiền mặc định là 0
+                txtTongTien.Text = "0"; // Thiết lập giá trị tổng tiền về 0
                 dtpNgayBan.Enabled = true;
             }
             else
             {
+                string maNV = txtMaNV.Text.Trim(); // Lấy mã nhân viên từ TextBox
+                string checkNVQuery = $"SELECT COUNT(*) FROM NHANVIEN WHERE MaNV = '{maNV}'";
+                int countNV;
+                try
+                {
+                    countNV = Convert.ToInt32(dataProcess.DataConnect(checkNVQuery).Rows[0][0]);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi kiểm tra mã nhân viên: {ex.Message}");
+                    return;
+                }
+
+                if (countNV == 0)
+                {
+                    MessageBox.Show("Mã nhân viên không tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Ngừng thực hiện nếu mã nhân viên không tồn tại
+                }
+
                 // Lần thứ hai, kiểm tra xem các TextBox đã được điền thông tin chưa
                 if (textBoxes.All(tb => !string.IsNullOrWhiteSpace(tb.Text)))
                 {
-                    // Nếu tất cả các TextBox đã được điền, gọi phương thức Add
+                    string maKH = txtMaKH.Text.Trim(); // Lấy mã khách hàng từ TextBox
+
+                    // Kiểm tra mã khách hàng
+                    string checkKHQuery = $"SELECT COUNT(*) FROM KHACHHANG WHERE MaKH = '{maKH}'";
+                    int countKH;
+                    try
+                    {
+                        countKH = Convert.ToInt32(dataProcess.DataConnect(checkKHQuery).Rows[0][0]);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi kiểm tra mã khách hàng: {ex.Message}");
+                        return;
+                    }
+
+                    if (countKH == 0)
+                    {
+                        // Nếu mã khách hàng không tồn tại, yêu cầu nhập thông tin khách hàng mới
+                       
+                        string diaChi = Microsoft.VisualBasic.Interaction.InputBox("Nhập địa chỉ khách hàng:", "Thông Tin Khách Hàng");
+
+                        // Kiểm tra xem người dùng có nhập thông tin không
+                        if ( !string.IsNullOrWhiteSpace(diaChi))
+                        {
+                            // Chèn khách hàng mới vào bảng KHACHHANG
+                            string insertKHQuery = $"INSERT INTO KHACHHANG (MaKH, DiaChi) VALUES ('{maKH}', '{diaChi}')";
+                            try
+                            {
+                                dataProcess.ExecuteQuery(insertKHQuery);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Lỗi khi thêm khách hàng mới: {ex.Message}");
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng nhập đủ thông tin khách hàng.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return; // Ngừng thực hiện nếu không có thông tin
+                        }
+                    }
+
+                    // Kiểm tra mã hóa đơn đã tồn tại hay chưa
+                    string maHDB = txtMaHDB.Text.Trim(); // Lấy mã hóa đơn từ TextBox
+                    if (function.CheckExists("HOADONBAN", "MaHDB", maHDB))
+                    {
+                        // Nếu mã hóa đơn đã tồn tại, thông báo cho người dùng
+                        MessageBox.Show("Mã hóa đơn đã tồn tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Ngừng thực hiện nếu trùng
+                    }
+
+                    // Nếu tất cả các TextBox đã được điền và mã hóa đơn không trùng, gọi phương thức Add
                     function.Add();
-                    MessageBox.Show("Thêm sản phẩm thành công!");
+                    MessageBox.Show("Thêm hoá đơn thành công!");
 
                     // Thiết lập lại trạng thái
                     SetTextBoxReadOnly(true);
                     txtMaHDB.ReadOnly = true;
                     isEditing = false; // Đánh dấu không còn ở chế độ nhập thông tin
                     ClearTextBoxes(); // Xóa các TextBox sau khi thêm
+                    dtpNgayBan.Enabled = false;
                 }
                 else
                 {
@@ -240,12 +312,16 @@ namespace BTLBinh
 
                 formChiTiet.Show(); // Hiển thị form chi tiết hóa đơn
 
-                this.Close();
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn một hóa đơn để xem chi tiết.");
             }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            function.LoadData();
         }
     }
 }

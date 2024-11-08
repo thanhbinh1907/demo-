@@ -19,6 +19,7 @@ namespace BTLBinh
         public Form1()
         {
             InitializeComponent();
+            this.FormClosed += (sender, e) => Application.Exit();
             List<TextBox> list = new List<TextBox> { txtMaSp, txtTenSp, txtMaLoai, txtGiaNhap, txtGiaBan, txtSoLuong, txtMaCD };
             function = new Function(dataProcess, dgvDanhSach, list, "SANPHAM", pbAnh, null, null);
             function.LoadData();
@@ -311,5 +312,6 @@ namespace BTLBinh
             function.LoadData();
         }
         //--------------------------------------------------------------------------------------------------//
+
     }
 }
