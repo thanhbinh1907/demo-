@@ -1,6 +1,6 @@
-﻿namespace BTLBinh
+﻿namespace BTLBinh.Report.RpChiTietHoaDonBan
 {
-    partial class FormReport
+    partial class FormReportChiTietHDB
     {
         /// <summary>
         /// Required designer variable.
@@ -40,15 +40,15 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // FormReport
+            // FormReportChiTietHDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FormReport";
-            this.Text = "FormReport";
-            this.Load += new System.EventHandler(this.FormReport_Load);
+            this.Name = "FormReportChiTietHDB";
+            this.Text = "FormReportChiTietHDB";
+            this.Load += new System.EventHandler(this.FormReportChiTietHDB_Load);
             this.ResumeLayout(false);
 
         }

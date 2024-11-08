@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BTLBinh.Function;
+using BTLBinh.Report.RpNhanVien;
 
 namespace BTLBinh
 {
@@ -233,6 +234,12 @@ namespace BTLBinh
         {
             txtTimKiem.Text = "Nhập tên nhân viên hoặc mã nhân viên";
             txtTimKiem.ForeColor = Color.Gray;
+        }
+
+        private void btnRp_Click(object sender, EventArgs e)
+        {
+            FormReportNhanVien formReport = new FormReportNhanVien();
+            formReport.ShowDialog();
         }
     }
 }

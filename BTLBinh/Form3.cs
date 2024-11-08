@@ -149,11 +149,11 @@ namespace BTLBinh
                     if (countKH == 0)
                     {
                         // Nếu mã khách hàng không tồn tại, yêu cầu nhập thông tin khách hàng mới
-                       
+
                         string diaChi = Microsoft.VisualBasic.Interaction.InputBox("Nhập địa chỉ khách hàng:", "Thông Tin Khách Hàng");
 
                         // Kiểm tra xem người dùng có nhập thông tin không
-                        if ( !string.IsNullOrWhiteSpace(diaChi))
+                        if (!string.IsNullOrWhiteSpace(diaChi))
                         {
                             // Chèn khách hàng mới vào bảng KHACHHANG
                             string insertKHQuery = $"INSERT INTO KHACHHANG (MaKH, DiaChi) VALUES ('{maKH}', '{diaChi}')";

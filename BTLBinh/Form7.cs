@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using BTLBinh.Report.RpChiTietHoaDonNhap;
 
 namespace BTLBinh
 {
@@ -253,8 +254,16 @@ namespace BTLBinh
                 return;
             }
 
+            // Lấy giá nhập từ bảng SANPHAM
+            decimal giaNhap = GetGiaSP(maSP);
+            if (giaNhap == 0)
+            {
+                MessageBox.Show("Không tìm thấy giá sản phẩm.");
+                return;
+            }
+
             // Kiểm tra xem sản phẩm đã tồn tại trong bảng CHITIETHDN chưa
-            string checkQuery = $"SELECT SoLuong FROM CHITIETHDN WHERE MaHDN = '{maHDNToUse}' AND MaSP = '{maSP}'";
+            string checkQuery = $"SELECT SoLuong, DonGia FROM CHITIETHDN WHERE MaHDN = '{maHDNToUse}' AND MaSP = '{maSP}'";
 
             try
             {
@@ -262,22 +271,36 @@ namespace BTLBinh
 
                 if (dtCheck != null && dtCheck.Rows.Count > 0)
                 {
-                    // Sản phẩm đã tồn tại, cập nhật số lượng
+                    // Sản phẩm đã tồn tại
                     int existingQuantity = Convert.ToInt32(dtCheck.Rows[0]["SoLuong"]);
-                    int newQuantity = existingQuantity + soLuong; // Cộng thêm số lượng mới
+                    int newQuantity = existingQuantity + soLuong;
 
-                    decimal thanhTien = (gia - (gia * khuyenMai / 100)) * newQuantity;
+                    // Lấy giá đơn giá hiện tại
+                    decimal currentDonGia = dtCheck.Rows[0]["DonGia"] != DBNull.Value ? Convert.ToDecimal(dtCheck.Rows[0]["DonGia"]) : 0;
 
-                    // Cập nhật số lượng và thành tiền
-                    string updateQuery = $"UPDATE CHITIETHDN SET SoLuong = {newQuantity}, ThanhTien = {thanhTien}, KhuyenMai = {khuyenMai} WHERE MaHDN = '{maHDNToUse}' AND MaSP = '{maSP}'";
-                    dataProcess.ExecuteQuery(updateQuery);
-                    MessageBox.Show("Cập nhật số lượng sản phẩm thành công.");
+                    // Nếu đơn giá hiện tại khác với giá nhập, cập nhật lại
+                    if (currentDonGia != giaNhap)
+                    {
+                        decimal thanhTien = (giaNhap - (giaNhap * khuyenMai / 100)) * newQuantity;
+
+                        // Cập nhật số lượng và đơn giá
+                        string updateQuery = $"UPDATE CHITIETHDN SET SoLuong = {newQuantity}, DonGia = {giaNhap}, ThanhTien = {thanhTien}, KhuyenMai = {khuyenMai} WHERE MaHDN = '{maHDNToUse}' AND MaSP = '{maSP}'";
+                        dataProcess.ExecuteQuery(updateQuery);
+                        MessageBox.Show("Cập nhật số lượng và đơn giá sản phẩm thành công.");
+                    }
+                    else
+                    {
+                        // Chỉ cập nhật số lượng nếu đơn giá không thay đổi
+                        string updateQuantityQuery = $"UPDATE CHITIETHDN SET SoLuong = {newQuantity} WHERE MaHDN = '{maHDNToUse}' AND MaSP = '{maSP}'";
+                        dataProcess.ExecuteQuery(updateQuantityQuery);
+                        MessageBox.Show("Cập nhật số lượng sản phẩm thành công.");
+                    }
                 }
                 else
                 {
                     // Sản phẩm chưa tồn tại, thêm mới vào bảng
-                    decimal thanhTien = (gia - (gia * khuyenMai / 100)) * soLuong;
-                    string insertQuery = $"INSERT INTO CHITIETHDN (MaHDN, MaSP, SoLuong, ThanhTien, KhuyenMai) VALUES ('{maHDNToUse}', '{maSP}', {soLuong}, {thanhTien}, {khuyenMai})";
+                    decimal thanhTien = (giaNhap - (giaNhap * khuyenMai / 100)) * soLuong;
+                    string insertQuery = $"INSERT INTO CHITIETHDN (MaHDN, MaSP, SoLuong, DonGia, ThanhTien, KhuyenMai) VALUES ('{maHDNToUse}', '{maSP}', {soLuong}, {giaNhap}, {thanhTien}, {khuyenMai})";
                     dataProcess.ExecuteQuery(insertQuery);
                     MessageBox.Show("Thêm sản phẩm thành công.");
                 }
@@ -476,7 +499,7 @@ namespace BTLBinh
                     decimal thanhTien = (gia - (gia * newKhuyenMai / 100)) * newSoLuong;
 
                     // Cập nhật thông tin sản phẩm trong bảng chi tiết hóa đơn
-                    string updateQuery = $"UPDATE CHITIETHDB SET SoLuong = {newSoLuong}, ThanhTien = {thanhTien}, KhuyenMai = {newKhuyenMai} WHERE MaHDN = '{maHDN}' AND MaSP = '{maSP}'";
+                    string updateQuery = $"UPDATE CHITIETHDN SET SoLuong = {newSoLuong}, ThanhTien = {thanhTien}, KhuyenMai = {newKhuyenMai} WHERE MaHDN = '{maHDN}' AND MaSP = '{maSP}'";
                     dataProcess.ExecuteQuery(updateQuery);
 
                     MessageBox.Show("Thay đổi đã được lưu thành công.");
@@ -582,6 +605,12 @@ namespace BTLBinh
             System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
             System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
             System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormReportChiTietHDN report = new FormReportChiTietHDN(maHDN);
+            report.ShowDialog();
         }
     }
 }

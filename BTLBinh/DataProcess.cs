@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -40,12 +41,45 @@ namespace BTLBinh
                 }
             }
         }
-
-        public void CloseConnection(SqlConnection connection)
+        public DataTable GetDanhMuc()
         {
-            if (connection != null && connection.State == ConnectionState.Open)
+            using (SqlConnection Connection = new SqlConnection(connectionString))
             {
-                connection.Close();
+                string query = "Select * from SANPHAM";
+                SqlDataAdapter adt = new SqlDataAdapter(query, Connection);
+                DataTable dt = new DataTable();
+                adt.Fill(dt);
+                return dt;
+            }
+        }
+        public DataTable GetNhanVien()
+        {
+            using (SqlConnection Connection = new SqlConnection(connectionString))
+            {
+                string query = "Select * from NHANVIEN";
+                SqlDataAdapter adt = new SqlDataAdapter(query, Connection);
+                DataTable dt = new DataTable();
+                adt.Fill(dt);
+                return dt;
+            }
+        }
+        public DataTable GetChiTietHD(string tablename, string TenCot, string maHD)
+        {
+            using (SqlConnection Connection = new SqlConnection(connectionString))
+            {
+                // Sử dụng phép nối chuỗi để tạo câu truy vấn SQL
+                string query = $"SELECT * FROM {tablename} WHERE {TenCot} = @MaHD";
+
+                using (SqlCommand command = new SqlCommand(query, Connection))
+                {
+                    // Thêm tham số để tránh SQL Injection
+                    command.Parameters.AddWithValue("@MaHD", maHD);
+
+                    SqlDataAdapter adt = new SqlDataAdapter(command);
+                    DataTable dt = new DataTable();
+                    adt.Fill(dt);
+                    return dt;
+                }
             }
         }
     }

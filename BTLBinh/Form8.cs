@@ -30,28 +30,30 @@ namespace BTLBinh
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUser.Text.Trim(); // Lấy tên đăng nhập và loại bỏ khoảng trắng
-            string password = txtPassword.Text.Trim(); // Lấy mật khẩu và loại bỏ khoảng trắng
+            string username = txtUser.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            // Kiểm tra nếu một trong hai ô trống
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                // Hiển thị thông báo yêu cầu nhập đầy đủ
                 MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Kết thúc phương thức nếu có ô trống
+                return;
             }
 
-            // Kiểm tra tài khoản và mật khẩu
-            if (username == "admin" && password == Password.CurrentPassword) // Sử dụng mật khẩu từ lớp UserCredentials
+            if (username == "admin" && password == Password.CurrentPassword)
             {
-                // Chuyển sang form khác
-                Form1 newForm = new Form1();
-                newForm.Show();
-                this.Hide();
+                try
+                {
+                    Form1 newForm = new Form1();
+                    newForm.Show(); // Hiển thị form mới
+                    this.Hide(); // Đóng form hiện tại
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                // Hiển thị thông báo lỗi bằng MessageBox
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Lỗi Đăng Nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

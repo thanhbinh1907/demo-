@@ -311,6 +311,12 @@ namespace BTLBinh
         {
             function.LoadData();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormReportDanhMuc formReport = new FormReportDanhMuc();
+            formReport.ShowDialog();
+        }
         //--------------------------------------------------------------------------------------------------//
 
     }

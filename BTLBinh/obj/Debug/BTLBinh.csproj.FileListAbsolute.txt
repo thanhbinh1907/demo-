@@ -77,6 +77,27 @@ C:\Users\Admin\Desktop\BTL\1232 7-11\LTTQ\BTLBinh\obj\Debug\BTLBinh.pdb
 C:\Users\Admin\Desktop\BTL\1232 7-11\LTTQ\BTLBinh\bin\Debug\BTLBinh.exe.config
 C:\Users\Admin\Desktop\BTL\1232 7-11\LTTQ\BTLBinh\bin\Debug\BTLBinh.exe
 C:\Users\Admin\Desktop\BTL\1232 7-11\LTTQ\BTLBinh\bin\Debug\BTLBinh.pdb
+D:\Quang Huy\New folder\demo-\BTLBinh\bin\Debug\BTLBinh.exe.config
+D:\Quang Huy\New folder\demo-\BTLBinh\bin\Debug\BTLBinh.exe
+D:\Quang Huy\New folder\demo-\BTLBinh\bin\Debug\BTLBinh.pdb
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.AssemblyReference.cache
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form1.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form2.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form3.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form4.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form5.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form6.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form7.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form8.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Payment.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Order.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Properties.Resources.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.GenerateResource.cache
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.CoreCompileInputs.cache
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.exe
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.pdb
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.MenuItems.resources
+D:\Quang Huy\New folder\demo-\BTLBinh\obj\Debug\BTLBinh.Form9.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\bin\Debug\BTLBinh.exe.config
 C:\Users\Admin\Desktop\BTL\BTLBinh\bin\Debug\BTLBinh.exe
 C:\Users\Admin\Desktop\BTL\BTLBinh\bin\Debug\BTLBinh.pdb
@@ -88,6 +109,9 @@ C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form4.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form5.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form6.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form7.resources
+C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form8.resources
+C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form9.resources
+C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.MenuItems.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Payment.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Order.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Properties.Resources.resources
@@ -147,7 +171,8 @@ C:\Users\Admin\Desktop\BTL\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.WinForms.
 C:\Users\Admin\Desktop\BTL\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\BTL\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\BTL\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.FormReport.resources
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.csproj.Up2Date
-C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form8.resources
-C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Form9.resources
+C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.FormReportDanhMuc.resources
+C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Report.RpNhanVien.FormReportNhanVien.resources
+C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonNhap.FormReportChiTietHDN.resources
+C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonBan.FormReportChiTietHDB.resources

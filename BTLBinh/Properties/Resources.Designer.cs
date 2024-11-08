@@ -63,6 +63,16 @@ namespace BTLBinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _462581855_521093494077419_8968395065120325347_n {
+            get {
+                object obj = ResourceManager.GetObject("462581855_521093494077419_8968395065120325347_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nút_thêm {
             get {
                 object obj = ResourceManager.GetObject("nút thêm", resourceCulture);

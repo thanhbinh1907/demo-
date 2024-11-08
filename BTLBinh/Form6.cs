@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using BTLBinh.Report.RpChiTietHoaDonBan;
 
 namespace BTLBinh
 {
@@ -23,7 +24,6 @@ namespace BTLBinh
         public Form6(string maHDB)
         {
             InitializeComponent();
-            this.FormClosed += (sender, e) => Application.Exit();
             this.maHDB = maHDB; // Lưu mã hóa đơn
             LoadChiTiet(maHDB); // Gọi phương thức để tải chi tiết hóa đơn
             txtMaHDB.ReadOnly = true;
@@ -586,6 +586,12 @@ namespace BTLBinh
             System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
             System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
             System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormReportChiTietHDB report = new FormReportChiTietHDB(maHDB);
+            report.ShowDialog();
         }
     }
 }
