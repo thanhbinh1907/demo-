@@ -63,7 +63,7 @@ namespace BTLBinh
             MenuStripHelper.ApplyHoverEffect(tienIchToolStripMenuItem);
             MenuStripHelper.ApplyHoverEffect(troGiupToolStripMenuItem);
 
-            hoaDon01 = new HoaDon(null,null,null,null);
+            hoaDon01 = new HoaDon(null, null, null, null);
             hoaDon02 = new HoaDon(null, null, null, null);
             hoaDon03 = new HoaDon(null, null, null, null);
             hoaDon04 = new HoaDon(null, null, null, null);
@@ -82,7 +82,7 @@ namespace BTLBinh
 
         private void Order_Load(object sender, EventArgs e)
         {
-            
+
             dgv_hoaDon.CellEndEdit += dgv_hoaDon_CellEndEdit_1;
         }
 
@@ -183,9 +183,14 @@ namespace BTLBinh
             }
         }
 
-        private void buttonColor(Button btn) 
+        private void buttonColor(Button btn)
         {
             btn.BackColor = Color.Yellow;
+        }
+
+        private void ResetButtonColor(Button btn)
+        {
+            btn.BackColor = Color.FromArgb(224, 224, 224);
         }
 
         // Phương thức dùng để hiển thị dữ liệu hóa đơn lên các control
@@ -353,7 +358,6 @@ namespace BTLBinh
         {
             // Hành động khi nhận được thông báo từ Form2
             SaveToCsdl();
-            MessageBox.Show("Nút ở Form payment đã được nhấn!");
         }
 
         private void SaveToCsdl()
@@ -457,8 +461,68 @@ namespace BTLBinh
                     MessageBox.Show("Có lỗi xảy ra trong quá trình thanh toán: " + ex.Message);
                 }
             }
+
+            // Tiến hành hủy hóa đơn 
+            if (lbSoBan.Text == "Bàn số 01")
+            {
+                DeleteHoaDon(hoaDon01);
+                checkBan01 = false;
+                ResetButtonColor(btBan01);
+            }
+            else if (lbSoBan.Text == "Bàn số 02")
+            {
+                DeleteHoaDon(hoaDon02);
+                checkBan02 = false;
+                ResetButtonColor(btBan02);
+            }
+            else if (lbSoBan.Text == "Bàn số 03")
+            {
+                DeleteHoaDon(hoaDon03);
+                checkBan03 = false;
+                ResetButtonColor(btBan03);
+            }
+            else if (lbSoBan.Text == "Bàn số 04")
+            {
+                DeleteHoaDon(hoaDon04);
+                checkBan04 = false;
+                ResetButtonColor(btBan04);
+            }
+            else if (lbSoBan.Text == "Bàn số 05")
+            {
+                DeleteHoaDon(hoaDon05);
+                checkBan05 = false;
+                ResetButtonColor(btBan05);
+            }
+            else if (lbSoBan.Text == "Bàn số 06")
+            {
+                DeleteHoaDon(hoaDon06);
+                checkBan06 = false;
+                ResetButtonColor(btBan06);
+            }
+            else if (lbSoBan.Text == "Bàn số 07")
+            {
+                DeleteHoaDon(hoaDon07);
+                checkBan07 = false;
+                ResetButtonColor(btBan07);
+            }
+            else if (lbSoBan.Text == "Bàn số 08")
+            {
+                DeleteHoaDon(hoaDon08);
+                checkBan08 = false;
+                ResetButtonColor(btBan08);
+            }
+            else if (lbSoBan.Text == "Bàn số 09")
+            {
+                DeleteHoaDon(hoaDon09);
+                checkBan09 = false;
+                ResetButtonColor(btBan09);
+            }
         }
 
+        public void ResetTable()
+        {
+
+        }
 
         //------------------------------------------------------------------------------------------
 
@@ -692,54 +756,63 @@ namespace BTLBinh
                 {
                     DeleteHoaDon(hoaDon01);
                     checkBan01 = false;
+                    ResetButtonColor(btBan01);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 02")
                 {
                     DeleteHoaDon(hoaDon02);
                     checkBan02 = false;
+                    ResetButtonColor(btBan02);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 03")
                 {
                     DeleteHoaDon(hoaDon03);
                     checkBan03 = false;
+                    ResetButtonColor(btBan03);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 04")
                 {
                     DeleteHoaDon(hoaDon04);
                     checkBan04 = false;
+                    ResetButtonColor(btBan04);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 05")
                 {
                     DeleteHoaDon(hoaDon05);
                     checkBan05 = false;
+                    ResetButtonColor(btBan05);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 06")
                 {
                     DeleteHoaDon(hoaDon06);
                     checkBan06 = false;
+                    ResetButtonColor(btBan06);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 07")
                 {
                     DeleteHoaDon(hoaDon07);
                     checkBan07 = false;
+                    ResetButtonColor(btBan07);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 08")
                 {
                     DeleteHoaDon(hoaDon08);
                     checkBan08 = false;
+                    ResetButtonColor(btBan08);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
                 else if (lbSoBan.Text == "Bàn số 09")
                 {
                     DeleteHoaDon(hoaDon09);
                     checkBan09 = false;
+                    ResetButtonColor(btBan09);
                     MessageBox.Show("Hủy hóa đơn thành công");
                 }
             }

@@ -35,8 +35,12 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.cbHienMK = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbAnh = new System.Windows.Forms.PictureBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(389, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 16);
@@ -71,6 +76,7 @@
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtUser.Location = new System.Drawing.Point(478, 136);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(204, 22);
@@ -78,6 +84,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtPassword.Location = new System.Drawing.Point(478, 197);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(204, 22);
@@ -105,30 +112,54 @@
             this.label4.Text = "Change Password";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // btnLogin
+            // pictureBox2
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(478, 329);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(139, 36);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.pictureBox2.Image = global::BTLBinh.Properties.Resources._3d_lock;
+            this.pictureBox2.Location = new System.Drawing.Point(354, 183);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 36);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BTLBinh.Properties.Resources.profile;
+            this.pictureBox1.Location = new System.Drawing.Point(354, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 33);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // pbAnh
             // 
+            this.pbAnh.Image = global::BTLBinh.Properties.Resources.coffee_shop;
             this.pbAnh.Location = new System.Drawing.Point(66, 104);
             this.pbAnh.Name = "pbAnh";
             this.pbAnh.Size = new System.Drawing.Size(231, 204);
             this.pbAnh.TabIndex = 8;
             this.pbAnh.TabStop = false;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Image = global::BTLBinh.Properties.Resources.log_in;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(478, 325);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(139, 40);
+            this.btnLogin.TabIndex = 7;
+            this.btnLogin.Text = "  Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbAnh);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label4);
@@ -141,6 +172,8 @@
             this.Name = "Form8";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form8";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,5 +191,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pbAnh;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

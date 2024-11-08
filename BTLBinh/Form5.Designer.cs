@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -74,61 +74,87 @@
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Location = new System.Drawing.Point(46, 303);
             this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.Size = new System.Drawing.Size(402, 218);
             this.dgvDanhSach.TabIndex = 8;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnRp);
+            this.groupBox1.Controls.Add(this.btnReport);
             this.groupBox1.Controls.Add(this.btnLoad);
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Location = new System.Drawing.Point(46, 555);
+            this.groupBox1.Location = new System.Drawing.Point(10, 555);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 84);
+            this.groupBox1.Size = new System.Drawing.Size(475, 84);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnReport.Image = global::BTLBinh.Properties.Resources.report;
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport.Location = new System.Drawing.Point(373, 29);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(83, 33);
+            this.btnReport.TabIndex = 38;
+            this.btnReport.Text = "    Report";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnRp_Click);
+            // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(245, 29);
+            this.btnLoad.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnLoad.Image = global::BTLBinh.Properties.Resources.loading_arrow;
+            this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoad.Location = new System.Drawing.Point(284, 29);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(63, 31);
+            this.btnLoad.Size = new System.Drawing.Size(83, 33);
             this.btnLoad.TabIndex = 10;
             this.btnLoad.Text = "Tải Lại";
-            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(165, 29);
+            this.btnXoa.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoa.Image = global::BTLBinh.Properties.Resources.delete;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(194, 29);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(63, 31);
+            this.btnXoa.Size = new System.Drawing.Size(83, 33);
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(92, 29);
+            this.btnSua.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnSua.Image = global::BTLBinh.Properties.Resources.service;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(105, 29);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(59, 31);
+            this.btnSua.Size = new System.Drawing.Size(83, 33);
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.Bisque;
+            this.btnThem.Image = global::BTLBinh.Properties.Resources.plus;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(16, 29);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(56, 31);
+            this.btnThem.Size = new System.Drawing.Size(83, 33);
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox2
@@ -289,17 +315,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã NV";
             // 
-            // btnRp
-            // 
-            this.btnRp.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRp.Location = new System.Drawing.Point(322, 29);
-            this.btnRp.Name = "btnRp";
-            this.btnRp.Size = new System.Drawing.Size(63, 31);
-            this.btnRp.TabIndex = 11;
-            this.btnRp.Text = "Report";
-            this.btnRp.UseVisualStyleBackColor = false;
-            this.btnRp.Click += new System.EventHandler(this.btnRp_Click);
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,6 +363,6 @@
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.ComboBox cbbMaQue;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Button btnRp;
+        private System.Windows.Forms.Button btnReport;
     }
 }

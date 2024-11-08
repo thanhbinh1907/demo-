@@ -37,15 +37,9 @@
             this.btBan08 = new System.Windows.Forms.Button();
             this.btBan09 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLuuThongTin = new System.Windows.Forms.Button();
-            this.btHuyHoaDon = new System.Windows.Forms.Button();
-            this.btYeuCauThanhToan = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dgv_hoaDon = new System.Windows.Forms.DataGridView();
-            this.btXoa = new System.Windows.Forms.Button();
-            this.btThem = new System.Windows.Forms.Button();
-            this.btChonMon = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
@@ -63,6 +57,12 @@
             this.oRDERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btBan01 = new System.Windows.Forms.Button();
+            this.txtLuuThongTin = new System.Windows.Forms.Button();
+            this.btHuyHoaDon = new System.Windows.Forms.Button();
+            this.btYeuCauThanhToan = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
+            this.btThem = new System.Windows.Forms.Button();
+            this.btChonMon = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hoaDon)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -184,45 +184,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết ";
             // 
-            // txtLuuThongTin
-            // 
-            this.txtLuuThongTin.AutoSize = true;
-            this.txtLuuThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtLuuThongTin.Location = new System.Drawing.Point(60, 762);
-            this.txtLuuThongTin.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLuuThongTin.Name = "txtLuuThongTin";
-            this.txtLuuThongTin.Size = new System.Drawing.Size(240, 50);
-            this.txtLuuThongTin.TabIndex = 18;
-            this.txtLuuThongTin.Text = "Lưu thông tin ";
-            this.txtLuuThongTin.UseVisualStyleBackColor = false;
-            this.txtLuuThongTin.Click += new System.EventHandler(this.txtLuuThongTin_Click);
-            // 
-            // btHuyHoaDon
-            // 
-            this.btHuyHoaDon.AutoSize = true;
-            this.btHuyHoaDon.BackColor = System.Drawing.Color.Red;
-            this.btHuyHoaDon.Location = new System.Drawing.Point(379, 762);
-            this.btHuyHoaDon.Margin = new System.Windows.Forms.Padding(4);
-            this.btHuyHoaDon.Name = "btHuyHoaDon";
-            this.btHuyHoaDon.Size = new System.Drawing.Size(240, 50);
-            this.btHuyHoaDon.TabIndex = 17;
-            this.btHuyHoaDon.Text = "Hủy hóa đơn ";
-            this.btHuyHoaDon.UseVisualStyleBackColor = false;
-            this.btHuyHoaDon.Click += new System.EventHandler(this.btHuyHoaDon_Click);
-            // 
-            // btYeuCauThanhToan
-            // 
-            this.btYeuCauThanhToan.AutoSize = true;
-            this.btYeuCauThanhToan.BackColor = System.Drawing.Color.Cyan;
-            this.btYeuCauThanhToan.Location = new System.Drawing.Point(215, 833);
-            this.btYeuCauThanhToan.Margin = new System.Windows.Forms.Padding(4);
-            this.btYeuCauThanhToan.Name = "btYeuCauThanhToan";
-            this.btYeuCauThanhToan.Size = new System.Drawing.Size(244, 50);
-            this.btYeuCauThanhToan.TabIndex = 12;
-            this.btYeuCauThanhToan.Text = "Yêu cầu thanh toán";
-            this.btYeuCauThanhToan.UseVisualStyleBackColor = false;
-            this.btYeuCauThanhToan.Click += new System.EventHandler(this.btYeuCauThanhToan_Click);
-            // 
             // txtTongTien
             // 
             this.txtTongTien.Location = new System.Drawing.Point(344, 687);
@@ -254,45 +215,6 @@
             this.dgv_hoaDon.Size = new System.Drawing.Size(603, 277);
             this.dgv_hoaDon.TabIndex = 14;
             this.dgv_hoaDon.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hoaDon_CellEndEdit_1);
-            // 
-            // btXoa
-            // 
-            this.btXoa.AutoSize = true;
-            this.btXoa.BackColor = System.Drawing.Color.Red;
-            this.btXoa.Location = new System.Drawing.Point(473, 310);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(131, 42);
-            this.btXoa.TabIndex = 13;
-            this.btXoa.Text = "Xóa ";
-            this.btXoa.UseVisualStyleBackColor = false;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // btThem
-            // 
-            this.btThem.AutoSize = true;
-            this.btThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btThem.Location = new System.Drawing.Point(251, 310);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(183, 42);
-            this.btThem.TabIndex = 12;
-            this.btThem.Text = "Thêm";
-            this.btThem.UseVisualStyleBackColor = false;
-            this.btThem.Click += new System.EventHandler(this.btThem_Click);
-            // 
-            // btChonMon
-            // 
-            this.btChonMon.AutoSize = true;
-            this.btChonMon.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btChonMon.Location = new System.Drawing.Point(24, 310);
-            this.btChonMon.Margin = new System.Windows.Forms.Padding(4);
-            this.btChonMon.Name = "btChonMon";
-            this.btChonMon.Size = new System.Drawing.Size(183, 42);
-            this.btChonMon.TabIndex = 11;
-            this.btChonMon.Text = "Chọn món";
-            this.btChonMon.UseVisualStyleBackColor = false;
-            this.btChonMon.Click += new System.EventHandler(this.btChonMon_Click);
             // 
             // label4
             // 
@@ -459,6 +381,96 @@
             this.btBan01.Text = "Bàn 01";
             this.btBan01.UseVisualStyleBackColor = true;
             this.btBan01.Click += new System.EventHandler(this.btBan01_Click);
+            // 
+            // txtLuuThongTin
+            // 
+            this.txtLuuThongTin.AutoSize = true;
+            this.txtLuuThongTin.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtLuuThongTin.Image = global::BTLBinh.Properties.Resources.diskette;
+            this.txtLuuThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtLuuThongTin.Location = new System.Drawing.Point(120, 762);
+            this.txtLuuThongTin.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLuuThongTin.Name = "txtLuuThongTin";
+            this.txtLuuThongTin.Size = new System.Drawing.Size(169, 50);
+            this.txtLuuThongTin.TabIndex = 18;
+            this.txtLuuThongTin.Text = "       Lưu thông tin ";
+            this.txtLuuThongTin.UseVisualStyleBackColor = false;
+            this.txtLuuThongTin.Click += new System.EventHandler(this.txtLuuThongTin_Click);
+            // 
+            // btHuyHoaDon
+            // 
+            this.btHuyHoaDon.AutoSize = true;
+            this.btHuyHoaDon.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.btHuyHoaDon.Image = global::BTLBinh.Properties.Resources.x_button;
+            this.btHuyHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btHuyHoaDon.Location = new System.Drawing.Point(379, 762);
+            this.btHuyHoaDon.Margin = new System.Windows.Forms.Padding(4);
+            this.btHuyHoaDon.Name = "btHuyHoaDon";
+            this.btHuyHoaDon.Size = new System.Drawing.Size(207, 50);
+            this.btHuyHoaDon.TabIndex = 17;
+            this.btHuyHoaDon.Text = "Hủy hóa đơn ";
+            this.btHuyHoaDon.UseVisualStyleBackColor = false;
+            this.btHuyHoaDon.Click += new System.EventHandler(this.btHuyHoaDon_Click);
+            // 
+            // btYeuCauThanhToan
+            // 
+            this.btYeuCauThanhToan.AutoSize = true;
+            this.btYeuCauThanhToan.BackColor = System.Drawing.Color.Cyan;
+            this.btYeuCauThanhToan.Image = global::BTLBinh.Properties.Resources.visa;
+            this.btYeuCauThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btYeuCauThanhToan.Location = new System.Drawing.Point(215, 833);
+            this.btYeuCauThanhToan.Margin = new System.Windows.Forms.Padding(4);
+            this.btYeuCauThanhToan.Name = "btYeuCauThanhToan";
+            this.btYeuCauThanhToan.Size = new System.Drawing.Size(213, 50);
+            this.btYeuCauThanhToan.TabIndex = 12;
+            this.btYeuCauThanhToan.Text = "      Yêu cầu thanh toán";
+            this.btYeuCauThanhToan.UseVisualStyleBackColor = false;
+            this.btYeuCauThanhToan.Click += new System.EventHandler(this.btYeuCauThanhToan_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.AutoSize = true;
+            this.btXoa.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.btXoa.Image = global::BTLBinh.Properties.Resources.delete;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(442, 310);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(114, 42);
+            this.btXoa.TabIndex = 13;
+            this.btXoa.Text = "Xóa ";
+            this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btThem
+            // 
+            this.btThem.AutoSize = true;
+            this.btThem.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btThem.Image = global::BTLBinh.Properties.Resources.plus;
+            this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThem.Location = new System.Drawing.Point(269, 310);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btThem.Name = "btThem";
+            this.btThem.Size = new System.Drawing.Size(130, 42);
+            this.btThem.TabIndex = 12;
+            this.btThem.Text = "Thêm";
+            this.btThem.UseVisualStyleBackColor = false;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            // 
+            // btChonMon
+            // 
+            this.btChonMon.AutoSize = true;
+            this.btChonMon.BackColor = System.Drawing.Color.SpringGreen;
+            this.btChonMon.Image = global::BTLBinh.Properties.Resources.feature_selection;
+            this.btChonMon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btChonMon.Location = new System.Drawing.Point(39, 310);
+            this.btChonMon.Margin = new System.Windows.Forms.Padding(4);
+            this.btChonMon.Name = "btChonMon";
+            this.btChonMon.Size = new System.Drawing.Size(168, 42);
+            this.btChonMon.TabIndex = 11;
+            this.btChonMon.Text = "Chọn món";
+            this.btChonMon.UseVisualStyleBackColor = false;
+            this.btChonMon.Click += new System.EventHandler(this.btChonMon_Click);
             // 
             // Order
             // 

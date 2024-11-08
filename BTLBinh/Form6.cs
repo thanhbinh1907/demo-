@@ -205,10 +205,6 @@ namespace BTLBinh
                     // Cập nhật tổng tiền vào bảng HOADONBAN
                     UpdateTongTien(maHDB, tongTien);
                 }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy chi tiết hóa đơn.");
-                }
             }
             catch (Exception ex)
             {

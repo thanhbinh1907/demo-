@@ -204,10 +204,6 @@ namespace BTLBinh
                     // Cập nhật tổng tiền vào bảng HOADONBAN
                     UpdateTongTien(maHDN, tongTien);
                 }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy chi tiết hóa đơn.");
-                }
             }
             catch (Exception ex)
             {
@@ -355,6 +351,7 @@ namespace BTLBinh
                 {
                     chiTietCount = Convert.ToInt32(dataProcess.DataConnect(checkChiTietQuery).Rows[0][0]);
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Lỗi khi kiểm tra chi tiết hóa đơn: {ex.Message}");
