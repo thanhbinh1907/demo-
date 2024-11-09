@@ -301,5 +301,12 @@ namespace BTLBinh
         {
             function.LoadData();
         }
+
+        private void oRDERToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Order form = new Order();
+            form.Show();
+            this.Hide();
+        }
     }
 }

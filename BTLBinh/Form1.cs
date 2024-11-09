@@ -40,6 +40,8 @@ namespace BTLBinh
             MenuStripHelper.ApplyHoverEffect(nhàCungCấpToolStripMenuItem);
             MenuStripHelper.ApplyHoverEffect(tiệnÍchToolStripMenuItem);
             MenuStripHelper.ApplyHoverEffect(trợGiúpToolStripMenuItem);
+            MenuStripHelper.ApplyHoverEffect(orderToolStripMenuItem);
+
         }
         //----------THEM MOI----------------------------------------------------------------------------------------------------------------//
         private void Form1_Load(object sender, EventArgs e)
@@ -131,8 +133,8 @@ namespace BTLBinh
 
         private void orderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Order form7 = new Order();
-            form7.Show();
+            Order form = new Order();
+            form.Show();
             this.Hide();
         }
         //--------------------------------------------------------------------------------------------------------------------//
@@ -316,6 +318,21 @@ namespace BTLBinh
         {
             FormReportDanhMuc formReport = new FormReportDanhMuc();
             formReport.ShowDialog();
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tiệnÍchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
         //--------------------------------------------------------------------------------------------------//
 

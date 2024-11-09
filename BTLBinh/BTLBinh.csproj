@@ -149,7 +149,18 @@
     <Compile Include="MenuStripHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\RpNhaCungCap\FormReportNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\RpNhaCungCap\FormReportNCC.Designer.cs">
+      <DependentUpon>FormReportNCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="_BTL_LTTQDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_BTL_LTTQDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +209,10 @@
     <EmbeddedResource Include="Report\RpDanhMuc\FormReportDanhMuc.resx">
       <DependentUpon>FormReportDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\RpNhaCungCap\FormReportNCC.resx">
+      <DependentUpon>FormReportNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RpNhaCungCap\NhaCungCap.rdlc" />
     <EmbeddedResource Include="Report\RpNhanVien\FormReportNhanVien.resx">
       <DependentUpon>FormReportNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +261,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_BTL_LTTQDataSet.xsc">
+      <DependentUpon>_BTL_LTTQDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_BTL_LTTQDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_BTL_LTTQDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_BTL_LTTQDataSet.xss">
+      <DependentUpon>_BTL_LTTQDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -257,6 +283,21 @@
     <None Include="Resources\nút thêm.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Image\banhmithit.jpg" />
+    <Content Include="Resources\Image\banhngotdau.jpg" />
+    <Content Include="Resources\Image\caphedaxay.jpg" />
+    <Content Include="Resources\Image\capheden.jpg" />
+    <Content Include="Resources\Image\caphesua.jpg" />
+    <Content Include="Resources\Image\hamburger.jpg" />
+    <Content Include="Resources\Image\kemdua.jpg" />
+    <Content Include="Resources\Image\nuoccamep.jpg" />
+    <Content Include="Resources\Image\nuoceptao.jpg" />
+    <Content Include="Resources\Image\pizzaphomai.jpg" />
+    <Content Include="Resources\Image\saladraucu.jpg" />
+    <Content Include="Resources\Image\sinhtodau.jpg" />
+    <Content Include="Resources\Image\sodachanh.jpg" />
+    <Content Include="Resources\Image\trasuachantrau.jpg" />
+    <Content Include="Resources\Image\trasuamatcha.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

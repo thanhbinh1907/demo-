@@ -55,10 +55,10 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::BTLBinh.Properties.Resources.x_button;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(399, 535);
+            this.button2.Location = new System.Drawing.Point(355, 535);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 54);
+            this.button2.Size = new System.Drawing.Size(205, 54);
             this.button2.TabIndex = 2;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = false;
@@ -77,6 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(641, 679);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

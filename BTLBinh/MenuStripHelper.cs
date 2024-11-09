@@ -21,14 +21,14 @@ namespace BTLBinh
         private static void MenuItem_MouseEnter(object sender, EventArgs e)
         {
             ToolStripMenuItem item = sender as ToolStripMenuItem;
-            item.Font = new Font("Algerian", 16, FontStyle.Bold); // Tăng kích thước font
+            item.Font = new Font("Times New Roman", 16, FontStyle.Bold); // Tăng kích thước font
         }
 
         // Sự kiện khi chuột rời khỏi mục
         private static void MenuItem_MouseLeave(object sender, EventArgs e)
         {
             ToolStripMenuItem item = sender as ToolStripMenuItem;
-            item.Font = new Font("Algerian", 14, FontStyle.Regular); // Kích thước font ban đầu
+            item.Font = new Font("Times New Roman", 14, FontStyle.Regular); // Kích thước font ban đầu
         }
     }
 }

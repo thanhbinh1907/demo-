@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BTLBinh.Report.RpNhaCungCap;
 
 namespace BTLBinh
 {
@@ -187,6 +188,12 @@ namespace BTLBinh
                     isEditing = false; // Đánh dấu không còn ở chế độ chỉnh sửa
                 }
             }
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormReportNCC formReport = new FormReportNCC();
+            formReport.ShowDialog();
         }
     }
 }

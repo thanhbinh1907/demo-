@@ -323,5 +323,32 @@ namespace BTLBinh
         {
             function.LoadData();
         }
+
+        private void oRDERToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Order form = new Order();
+            form.Show();
+            this.Hide();
+        }
+
+        private void trợGiúpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tiệnÍchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

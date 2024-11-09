@@ -197,3 +197,4 @@ C:\Users\Admin\Desktop\BTL FINAL\LTTQ\BTLBinh\bin\Debug\ru\Microsoft.ReportViewe
 C:\Users\Admin\Desktop\BTL FINAL\LTTQ\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\BTL FINAL\LTTQ\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Admin\Desktop\BTL FINAL\LTTQ\BTLBinh\obj\Debug\BTLBinh.csproj.Up2Date
+C:\Users\Admin\Desktop\BTL FINAL\LTTQ\BTLBinh\obj\Debug\BTLBinh.Report.RpNhaCungCap.FormReportNCC.resources

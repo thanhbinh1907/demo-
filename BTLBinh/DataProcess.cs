@@ -11,7 +11,7 @@ namespace BTLBinh
 {
     internal class DataProcess
     {
-        private string connectionString = @"Data Source=LAPTOP-4I3NB3DQ\MSSQLSERVER01;Initial Catalog=BTL-LTTQ;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        private string connectionString = @"Data Source=LAPTOP-4I3NB3DQ\MSSQLSERVER01;Initial Catalog=LTTQ;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public DataTable DataConnect(string query)
         {
@@ -80,6 +80,17 @@ namespace BTLBinh
                     adt.Fill(dt);
                     return dt;
                 }
+            }
+        }
+        public DataTable GetNhaCungCap()
+        {
+            using (SqlConnection Connection = new SqlConnection(connectionString))
+            {
+                string query = "Select * from NHACUNGCAP";
+                SqlDataAdapter adt = new SqlDataAdapter(query, Connection);
+                DataTable dt = new DataTable();
+                adt.Fill(dt);
+                return dt;
             }
         }
     }

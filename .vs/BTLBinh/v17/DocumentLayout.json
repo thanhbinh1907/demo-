@@ -7,24 +7,28 @@
       "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\report\\rpdanhmuc\\formreportdanhmuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|c:\\users\\admin\\desktop\\btl final\\lttq\\btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|c:\\users\\admin\\desktop\\btl final\\lttq\\btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|c:\\users\\admin\\desktop\\btl final\\lttq\\btlbinh\\dataprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\dataprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|c:\\users\\admin\\desktop\\btl final\\lttq\\btlbinh\\report\\rpchitiethoadonnhap\\formreportchitiethdn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\report\\rpchitiethoadonnhap\\formreportchitiethdn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\report\\rpchitiethoadonban\\formreportchitiethdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\dataprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\dataprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\report\\rpchitiethoadonnhap\\formreportchitiethdn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\report\\rpchitiethoadonnhap\\formreportchitiethdn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,10 +115,6 @@
       "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\btlbinh\\form7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\form7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -177,8 +177,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 19,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 485,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -199,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Order.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Order.cs",
@@ -212,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "HoaDon.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\HoaDon.cs",
               "RelativeDocumentMoniker": "BTLBinh\\HoaDon.cs",
@@ -238,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Order.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Order.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Order.cs",
@@ -246,44 +246,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T07:28:45.274Z",
               "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormReportChiTietHDB.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
-              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
-              "RelativeToolTip": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T19:44:35.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormReportChiTietHDB.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
-              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs [Design]",
-              "RelativeToolTip": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T19:44:31.986Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormReportChiTietHDN.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
-              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
-              "RelativeToolTip": "BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T19:11:51.118Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -299,15 +261,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataProcess.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\DataProcess.cs",
-              "RelativeDocumentMoniker": "BTLBinh\\DataProcess.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\DataProcess.cs",
-              "RelativeToolTip": "BTLBinh\\DataProcess.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "FormReportDanhMuc.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
+              "RelativeToolTip": "BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T08:13:54.801Z",
+              "WhenOpened": "2024-11-08T19:44:44.602Z",
               "EditorCaption": ""
             },
             {
@@ -320,7 +282,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormReportChiTietHDB.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
+              "RelativeToolTip": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T19:44:35.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormReportChiTietHDB.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs [Design]",
+              "RelativeToolTip": "BTLBinh\\Report\\RpChiTietHoaDonBan\\FormReportChiTietHDB.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T19:44:31.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormReportChiTietHDN.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
+              "RelativeToolTip": "BTLBinh\\Report\\RpChiTietHoaDonNhap\\FormReportChiTietHDN.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T19:11:51.118Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "DataProcess.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\DataProcess.cs",
+              "RelativeDocumentMoniker": "BTLBinh\\DataProcess.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\DataProcess.cs",
+              "RelativeToolTip": "BTLBinh\\DataProcess.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T08:13:54.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form1.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form1.cs",
@@ -332,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Payment.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Payment.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Payment.cs",
@@ -343,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Payment.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Payment.cs",
@@ -354,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Form9.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form9.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form9.cs",
@@ -364,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "462535601_1597976264127211_349224676188851455_n.jpg",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Resources\\462535601_1597976264127211_349224676188851455_n.jpg",
               "RelativeDocumentMoniker": "BTLBinh\\Resources\\462535601_1597976264127211_349224676188851455_n.jpg",
@@ -375,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Form9.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form9.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form9.cs",
@@ -387,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Form8.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form8.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form8.cs",
@@ -397,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Program.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Program.cs",
@@ -409,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Form3.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form3.Designer.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form3.Designer.cs",
@@ -421,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Form8.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form8.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form8.cs",
@@ -433,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Form6.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form6.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form6.cs",
@@ -445,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Form5.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form5.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form5.cs",
@@ -457,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Form7.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form7.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form7.cs",
@@ -469,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Form4.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form4.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form4.cs",
@@ -481,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Form4.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form4.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form4.cs",
@@ -491,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form3.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form3.cs",
@@ -503,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form2.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form2.cs",
@@ -515,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form2.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form2.cs",
@@ -525,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Form1.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form1.cs",
@@ -536,7 +545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Password.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Password.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Password.cs",
@@ -681,22 +690,9 @@
           ]
         },
         {
-          "DockedWidth": 487,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 21,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormReportDanhMuc.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
-              "RelativeDocumentMoniker": "BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL FINAL\\LTTQ\\BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
-              "RelativeToolTip": "BTLBinh\\Report\\RpDanhMuc\\FormReportDanhMuc.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T19:44:44.602Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
