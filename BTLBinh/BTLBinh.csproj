@@ -58,6 +58,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\BuyData.cs" />
+    <Compile Include="Class\SalesData.cs" />
     <Compile Include="Class\User.cs" />
     <Compile Include="Form\Form9.cs">
       <SubType>Form</SubType>
@@ -150,6 +153,18 @@
     <Compile Include="Class\MenuStripHelper.cs" />
     <Compile Include="Class\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\RpHoaDonBan\FormReportHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\RpHoaDonBan\FormReportHDB.Designer.cs">
+      <DependentUpon>FormReportHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RpHoaDonNhap\FormReportHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\RpHoaDonNhap\FormReportHDN.Designer.cs">
+      <DependentUpon>FormReportHDN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\RpNhaCungCap\FormReportNCC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,15 +216,23 @@
     <EmbeddedResource Include="Report\RpChiTietHoaDonBan\FormReportChiTietHDB.resx">
       <DependentUpon>FormReportChiTietHDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\RpChiTietHoaDonBan\HoaDonBan.rdlc" />
+    <EmbeddedResource Include="Report\RpChiTietHoaDonBan\ChiTietHoaDonBan.rdlc" />
     <EmbeddedResource Include="Report\RpChiTietHoaDonNhap\FormReportChiTietHDN.resx">
       <DependentUpon>FormReportChiTietHDN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\RpChiTietHoaDonNhap\HoaDonNhap.rdlc" />
+    <EmbeddedResource Include="Report\RpChiTietHoaDonNhap\ChiTietHoaDonNhap.rdlc" />
     <EmbeddedResource Include="Report\RpDanhMuc\DanhMuc.rdlc" />
     <EmbeddedResource Include="Report\RpDanhMuc\FormReportDanhMuc.resx">
       <DependentUpon>FormReportDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\RpHoaDonBan\FormReportHDB.resx">
+      <DependentUpon>FormReportHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RpHoaDonBan\HoaDonBan.rdlc" />
+    <EmbeddedResource Include="Report\RpHoaDonNhap\FormReportHDN.resx">
+      <DependentUpon>FormReportHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RpHoaDonNhap\HoaDonNhap.rdlc" />
     <EmbeddedResource Include="Report\RpNhaCungCap\FormReportNCC.resx">
       <DependentUpon>FormReportNCC.cs</DependentUpon>
     </EmbeddedResource>

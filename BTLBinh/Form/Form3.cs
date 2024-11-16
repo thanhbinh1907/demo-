@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BTLBinh.Function;
+using BTLBinh.Report.RpHoaDonBan;
 
 namespace BTLBinh
 {
@@ -389,6 +390,12 @@ namespace BTLBinh
         private void lblUser_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormReportHDB formReport = new FormReportHDB();
+            formReport.ShowDialog();
         }
     }
 }

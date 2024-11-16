@@ -20,15 +20,33 @@ namespace BTLBinh.Report.RpNhaCungCap
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            try
+            {
+                DataProcess process = new DataProcess();
+                reportViewer1.LocalReport.ReportEmbeddedResource = "BTLBinh.Report.RpNhaCungCap.NhaCungCap.rdlc";
 
-            DataProcess process = new DataProcess();
-            reportViewer1.LocalReport.ReportEmbeddedResource = "BTLBinh.Report.RpNhaCungCap.NhaCungCap.rdlc";
-            ReportDataSource reportDataSource = new ReportDataSource();
-            reportDataSource.Name = "DataSet1";
-            reportDataSource.Value = process.GetNhaCungCap();
-            reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+                // Thiết lập nguồn dữ liệu
+                ReportDataSource reportDataSource = new ReportDataSource
+                {
+                    Name = "DataSet1",
+                    Value = process.GetNhaCungCap()
+                };
 
-            this.reportViewer1.RefreshReport();
+                reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+
+                // Thêm tham số để hiển thị tên người dùng
+                var parameters = new ReportParameter[]
+                {
+            new ReportParameter("UserName", User.CurrentEmployeeName ?? "Người dùng chưa đăng nhập")
+                };
+
+                reportViewer1.LocalReport.SetParameters(parameters); // Thiết lập tham số
+                this.reportViewer1.RefreshReport();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

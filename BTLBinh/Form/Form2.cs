@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTLBinh.Report.RpHoaDonBan;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BTLBinh.Function;
+using BTLBinh.Report.RpHoaDonNhap;
 
 namespace BTLBinh
 {
@@ -154,7 +156,6 @@ namespace BTLBinh
             {
                 isEditing = true; // Đánh dấu là đang chỉnh sửa
                 SetEdit();
-                txtMaHDN.ReadOnly = false;
 
                 // Lấy thông tin cũ từ Function
                 var oldValues = function.GetOldValues();
@@ -308,6 +309,12 @@ namespace BTLBinh
             Form8 loginForm = new Form8(); // Giả sử bạn có FormLogin
             loginForm.Show();
             this.Hide(); // Ẩn form hiện tại
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormReportHDN formReport = new FormReportHDN();
+            formReport.ShowDialog();
         }
     }
 }
