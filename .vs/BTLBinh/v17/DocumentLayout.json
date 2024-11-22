@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\BTL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL\\btlbinh\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL\\btlbinh\\class\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\class\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|c:\\users\\admin\\desktop\\btl\\btlbinh\\login\\form9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|c:\\users\\admin\\desktop\\btl\\btlbinh\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\form\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|C:\\Users\\Admin\\Desktop\\BTL\\btlbinh\\login\\form9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F3D1D8F3-AB14-4407-A402-D2B2873F2C8C}|BTLBinh\\BTLBinh.csproj|solutionrelative:btlbinh\\login\\form9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -192,7 +192,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 425,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -236,8 +236,7 @@
               "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\BTLBinh\\Login\\Form9.cs [Design]",
               "RelativeToolTip": "BTLBinh\\Login\\Form9.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:50:03.206Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-18T02:50:03.206Z"
             },
             {
               "$type": "Document",
@@ -249,8 +248,7 @@
               "RelativeToolTip": "BTLBinh\\Login\\Form9.cs",
               "ViewState": "AQIAALIAAAAAAAAAAAAkwLYAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T02:43:47.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T02:43:47.043Z"
             },
             {
               "$type": "Document",
@@ -376,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\BTLBinh\\Form\\Form1.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Form\\Form1.cs",
@@ -396,18 +394,17 @@
               "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\BTLBinh\\Form\\Form1.cs [Design]",
               "RelativeToolTip": "BTLBinh\\Form\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:43:12.06Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-06T11:43:12.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BTL\\BTLBinh\\Class\\Program.cs",
               "RelativeDocumentMoniker": "BTLBinh\\Class\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\BTLBinh\\Class\\Program.cs",
               "RelativeToolTip": "BTLBinh\\Class\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T13:41:54.787Z",
               "EditorCaption": ""
@@ -663,8 +660,7 @@
               "ToolTip": "C:\\Users\\Admin\\Desktop\\BTL\\BTLBinh\\Form\\Form1.Designer.cs",
               "RelativeToolTip": "BTLBinh\\Form\\Form1.Designer.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T13:43:53.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T13:43:53.577Z"
             },
             {
               "$type": "Document",

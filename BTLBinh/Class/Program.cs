@@ -13,7 +13,7 @@ namespace BTLBinh
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Khởi chạy Form1
-            Form1 mainForm = new Form1();
+            Form8 mainForm = new Form8();
             mainForm.FormClosed += OnFormClosed; // Đăng ký sự kiện khi đóng form
             Application.Run(mainForm); // Chạy vòng lặp sự kiện với Form1
         }
