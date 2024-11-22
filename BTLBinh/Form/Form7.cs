@@ -310,7 +310,7 @@ namespace BTLBinh
                 MessageBox.Show($"Lỗi khi thêm hoặc cập nhật sản phẩm vào hóa đơn: {ex.Message}");
             }
         }
-        private void UpdateTongTien(string maHDN, decimal tongTien)
+        public void UpdateTongTien(string maHDN, decimal tongTien)
         {
             // Câu truy vấn để cập nhật tổng tiền vào bảng HOADONBAN
             string updateQuery = $"UPDATE HOADONNHAP SET TongTien = {tongTien} WHERE MaHDN = '{maHDN}'";

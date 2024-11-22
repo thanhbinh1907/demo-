@@ -10,15 +10,15 @@ namespace BTLBinh
     {
         public string MaHoaDon { get; set; }
         public string MaNhanVien { get; set; }
-        public string MaKhachHang { get; set; }
+        public string SoDienThoai { get; set; }
         public string TenKhachHang { get; set; }
 
         // Constructor để khởi tạo đối tượng HoaDon
-        public HoaDon(string maHoaDon, string maNhanVien, string maKhachHang, string tenKhachHang)
+        public HoaDon(string maHoaDon, string maNhanVien, string soDienThoai, string tenKhachHang)
         {
             MaHoaDon = maHoaDon;
             MaNhanVien = maNhanVien;
-            MaKhachHang = maKhachHang;
+            SoDienThoai = soDienThoai;
             TenKhachHang = tenKhachHang;
         }
 
@@ -27,17 +27,11 @@ namespace BTLBinh
             if (MaHoaDon != null /*|| MaNhanVien != null || MaKhachHang != null || TenKhachHang != null */)
             {
                 return false;
-            } else { return true; }
+            }
+            else { return true; }
         }
 
         // Phương thức hiển thị thông tin hóa đơn (nếu cần)
-        public void Display()
-        {
-            Console.WriteLine($"Mã Hóa Đơn: {MaHoaDon}");
-            Console.WriteLine($"Mã Nhân Viên: {MaNhanVien}");
-            Console.WriteLine($"Mã Khách Hàng: {MaKhachHang}");
-            Console.WriteLine($"Tên Khách Hàng: {TenKhachHang}");
-        }
     }
 
 }

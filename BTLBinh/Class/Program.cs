@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using BTLBinh.Chart;
 
 namespace BTLBinh
 {
@@ -13,7 +14,7 @@ namespace BTLBinh
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Khởi chạy Form1
-            Form8 mainForm = new Form8();
+            ChartForm mainForm = new ChartForm();
             mainForm.FormClosed += OnFormClosed; // Đăng ký sự kiện khi đóng form
             Application.Run(mainForm); // Chạy vòng lặp sự kiện với Form1
         }

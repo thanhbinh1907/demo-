@@ -281,3 +281,287 @@ C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.csproj.CoreCompileInputs.ca
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.csproj.Up2Date
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.exe
 C:\Users\Admin\Desktop\BTL\BTLBinh\obj\Debug\BTLBinh.pdb
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.AssemblyReference.cache
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form1.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form2.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form3.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form4.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form5.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form6.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form7.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form8.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Form9.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.MenuItems.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Payment.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Order.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonBan.FormReportChiTietHDB.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonNhap.FormReportChiTietHDN.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.FormReportDanhMuc.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpHoaDonBan.FormReportHDB.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpHoaDonNhap.FormReportHDN.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpNhaCungCap.FormReportNCC.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpNhanVien.FormReportNhanVien.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Properties.Resources.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.GenerateResource.cache
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.CoreCompileInputs.cache
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.exe
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.pdb
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\BTLBinh.exe.config
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\BTLBinh.exe
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\BTLBinh.pdb
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\EnvDTE.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\stdole.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.BankTransfer.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.Cash.resources
+D:\Quang Huy\Cop\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.Up2Date
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\BTLBinh.exe.config
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\BTLBinh.exe
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\BTLBinh.pdb
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\EnvDTE.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\stdole.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.AssemblyReference.cache
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.BankTransfer.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Cash.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form1.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form2.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form3.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form4.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form5.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form6.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form7.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form8.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Form9.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.MenuItems.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Payment.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Order.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonBan.FormReportChiTietHDB.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonNhap.FormReportChiTietHDN.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.FormReportDanhMuc.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpHoaDonBan.FormReportHDB.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpHoaDonNhap.FormReportHDN.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpNhaCungCap.FormReportNCC.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Report.RpNhanVien.FormReportNhanVien.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.Properties.Resources.resources
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.GenerateResource.cache
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.CoreCompileInputs.cache
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.csproj.Up2Date
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.exe
+D:\Quang Huy\LTTQ\demo-\BTLBinh\obj\Debug\BTLBinh.pdb
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\BTLBinh.exe.config
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\BTLBinh.exe
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\BTLBinh.pdb
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\EnvDTE.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\stdole.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.BankTransfer.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Cash.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form1.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form2.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form3.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form4.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form5.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form6.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form7.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form8.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Form9.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.MenuItems.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Payment.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Order.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonBan.FormReportChiTietHDB.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Report.RpChiTietHoaDonNhap.FormReportChiTietHDN.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.FormReportDanhMuc.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Report.RpHoaDonBan.FormReportHDB.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Report.RpHoaDonNhap.FormReportHDN.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Report.RpNhaCungCap.FormReportNCC.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Report.RpNhanVien.FormReportNhanVien.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Properties.Resources.resources
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.csproj.Up2Date
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.exe
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.pdb
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Buffers.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Memory.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Text.Json.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.ValueTuple.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Twilio.dll
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Buffers.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Memory.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Text.Json.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\System.ValueTuple.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\bin\Debug\Twilio.xml
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.exe.config
+C:\Users\Admin\Desktop\BTL\btl_lttq\BTLBinh\obj\Debug\BTLBinh.Chart.ChartForm.resources

@@ -12,7 +12,6 @@ namespace BTLBinh
 {
     public partial class MenuItems : Form
     {
-        Boolean submit = false;
 
 
 
@@ -25,13 +24,6 @@ namespace BTLBinh
 
         //-----------------------------------------------------------------------------------
         
-
-
-        public Boolean Submit
-        {
-            get { return submit; }
-            set { submit = value; }
-        }
 
         private void ResetAllTextBoxesInAllGroupBoxes()
         {
@@ -227,12 +219,12 @@ namespace BTLBinh
 
         public string getTraSuaTranChau()
         {
-            return gbtraSuaTranChau.Text;
+            return gbTraSuaTranChau.Text;
         }
 
         public string getSinhToDau()
         {
-            return gbtraSuaTranChau.Text;
+            return gbSinhToDau.Text;
         }
 
         public string getNuocCamEp()
@@ -276,7 +268,36 @@ namespace BTLBinh
         public string getTraSuaMatcha()
         { return gbTraSuaMatcha.Text; }
 
-        //----------------------------------------------------------------------------------------------
+        //public List<string> GetTextBoxValues()
+        //{
+        //    return new List<string>
+        //    {
+        //        txtCaPheDen.Text,
+        //        txtCaPheSua.Text,
+        //        txtTraSuaTranChau.Text,
+        //        txtSinhToDau.Text,
+        //        txtNuocCamEp.Text,
+        //        txtSodaChanh.Text,
+        //        txtBanhNgotDau.Text,
+        //        txtBanhMiThit.Text,
+        //        txtPizza.Text,
+        //        txtSalad.Text,
+        //        txtHamburger.Text,
+        //        txtKemDua.Text,
+        //        txtNuocEpTao.Text,
+        //        txtCaPheDaXay.Text,
+        //        txtTraSuaMatcha.Text
+        //    };
+        //}
+
+        public List<int> ProductQuantities { get; private set; } = new List<int>();
+
+        public List<string> ProductNames { get; private set; } = new List<string>();
+
+
+
+        //---------------------------------------------------------------------------------------------
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -300,12 +321,12 @@ namespace BTLBinh
 
         private void button5_Click(object sender, EventArgs e)
         {
-            UpdateTextBoxInGroupBox(gbtraSuaTranChau, 1);
+            UpdateTextBoxInGroupBox(gbTraSuaTranChau, 1);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            UpdateTextBoxInGroupBox(gbtraSuaTranChau, -1);
+            UpdateTextBoxInGroupBox(gbTraSuaTranChau, -1);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -435,21 +456,122 @@ namespace BTLBinh
 
         private void btOk_Click(object sender, EventArgs e)
         {
-            submit = true;
-            this.Hide();
+            //ProductQuantities.Add(txtCaPheDen.Text);
+            //ProductQuantities.Add(txtCaPheSua.Text);
+            //ProductQuantities.Add(txtTraSuaTranChau.Text);
+            //ProductQuantities.Add(txtSinhToDau.Text);
+            //ProductQuantities.Add(txtNuocCamEp.Text);
+            //ProductQuantities.Add(txtSodaChanh.Text);
+            //ProductQuantities.Add(txtBanhNgotDau.Text);
+            //ProductQuantities.Add(txtBanhMiThit.Text);
+            //ProductQuantities.Add(txtPizza.Text);
+            //ProductQuantities.Add(txtSalad.Text);
+            //ProductQuantities.Add(txtHamburger.Text);
+            //ProductQuantities.Add(txtKemDua.Text);
+            //ProductQuantities.Add(txtNuocEpTao.Text);
+            //ProductQuantities.Add(txtCaPheDaXay.Text);
+            //ProductQuantities.Add(txtTraSuaMatcha.Text);
+
+            ProductNames.Clear();
+            ProductQuantities.Clear();
+
+            foreach (Control control in this.Controls)
+            {
+                // Kiểm tra nếu control là GroupBox
+                if (control is GroupBox groupBox)
+                {
+                    // Tìm TextBox bên trong GroupBox
+                    var textBox = groupBox.Controls.OfType<TextBox>().FirstOrDefault();
+
+                    if (textBox != null && int.TryParse(textBox.Text, out int value) && value > 0)
+                    {
+                        ProductNames.Add(groupBox.Text);    // Lưu tên sản phẩm từ GroupBox
+                        ProductQuantities.Add(value);       // Lưu số lượng từ TextBox
+                    }
+                }
+
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+            //this.Hide();
+
         }
 
-        
 
+        private void gbCaPheDaXay_Enter(object sender, EventArgs e)
+        {
 
+        }
 
+        private void gbNuocEpTao_Enter(object sender, EventArgs e)
+        {
 
+        }
 
+        private void gbKemDua_Enter(object sender, EventArgs e)
+        {
 
+        }
 
-        //-----------------------------------------------------------------------------------------
+        private void gbHamburger_Enter(object sender, EventArgs e)
+        {
 
+        }
 
+        private void gbSalad_Enter(object sender, EventArgs e)
+        {
 
+        }
+
+        private void gbPizza_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbBanhMiThit_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbBanhNgotDau_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbSodaChanh_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbNuocCamEp_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbSinhToDau_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbTraSuaTranChau_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbCaPheSua_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbTraSuaMatcha_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbCaPheDen_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

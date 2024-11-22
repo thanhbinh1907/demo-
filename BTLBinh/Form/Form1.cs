@@ -23,7 +23,7 @@ namespace BTLBinh
 
             List<TextBox> list = new List<TextBox> { txtMaSp, txtTenSp, txtMaLoai, txtGiaNhap, txtGiaBan, txtSoLuong, txtMaCD };
             function = new Function(dataProcess, dgvDanhSach, list, "SANPHAM", pbAnh, null, null,null);
-            function.LoadData();
+            function.LoadDataSanPham();
             pbAnh.SizeMode = PictureBoxSizeMode.StretchImage;
             SetTextBoxReadOnly(true);
             txtMaSp.ReadOnly = true;
@@ -52,6 +52,7 @@ namespace BTLBinh
         {
             txtTimKiem.Text = "Nhập tên sản phẩm hoặc mã sản phẩm";
             txtTimKiem.ForeColor = Color.Gray;
+            dgvDanhSach.Columns["HinhAnh"].Visible = false;
         }
         private void txtTimKiem_Enter(object sender, EventArgs e)
         {

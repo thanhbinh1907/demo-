@@ -37,6 +37,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.clbGioiTinh = new System.Windows.Forms.CheckedListBox();
             this.cbbMaQue = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.clbGioiTinh = new System.Windows.Forms.CheckedListBox();
+            this.btnThemGmail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -183,6 +184,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin nhân viên";
             // 
+            // clbGioiTinh
+            // 
+            this.clbGioiTinh.FormattingEnabled = true;
+            this.clbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.clbGioiTinh.Location = new System.Drawing.Point(68, 145);
+            this.clbGioiTinh.Name = "clbGioiTinh";
+            this.clbGioiTinh.Size = new System.Drawing.Size(120, 34);
+            this.clbGioiTinh.TabIndex = 18;
+            this.clbGioiTinh.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbGioiTinh_ItemCheck);
+            // 
             // cbbMaQue
             // 
             this.cbbMaQue.FormattingEnabled = true;
@@ -210,7 +223,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(214, 200);
+            this.txtTimKiem.Location = new System.Drawing.Point(214, 201);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(142, 20);
             this.txtTimKiem.TabIndex = 14;
@@ -309,23 +322,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã NV";
             // 
-            // clbGioiTinh
+            // btnThemGmail
             // 
-            this.clbGioiTinh.FormattingEnabled = true;
-            this.clbGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.clbGioiTinh.Location = new System.Drawing.Point(68, 145);
-            this.clbGioiTinh.Name = "clbGioiTinh";
-            this.clbGioiTinh.Size = new System.Drawing.Size(120, 34);
-            this.clbGioiTinh.TabIndex = 18;
-            this.clbGioiTinh.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbGioiTinh_ItemCheck);
+            this.btnThemGmail.Location = new System.Drawing.Point(342, 527);
+            this.btnThemGmail.Name = "btnThemGmail";
+            this.btnThemGmail.Size = new System.Drawing.Size(106, 24);
+            this.btnThemGmail.TabIndex = 19;
+            this.btnThemGmail.Text = "Thêm Gmail";
+            this.btnThemGmail.UseVisualStyleBackColor = true;
+            this.btnThemGmail.Click += new System.EventHandler(this.btnThemGmail_Click);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 661);
+            this.Controls.Add(this.btnThemGmail);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvDanhSach);
@@ -370,5 +382,6 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.CheckedListBox clbGioiTinh;
+        private System.Windows.Forms.Button btnThemGmail;
     }
 }

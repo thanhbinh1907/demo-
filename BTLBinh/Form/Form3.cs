@@ -334,6 +334,8 @@ namespace BTLBinh
 
                 formChiTiet.Show(); // Hiển thị form chi tiết hóa đơn
 
+                formChiTiet.FormClosed += (formSender, formEventArgs) => function.LoadData();
+
             }
             else
             {

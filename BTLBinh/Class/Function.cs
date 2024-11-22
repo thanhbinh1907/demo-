@@ -5,9 +5,6 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Globalization;
-using System.Security.Permissions;
-using System.ComponentModel.Design;
-using System.Runtime.CompilerServices; // Để định dạng ngày tháng
 
 namespace BTLBinh
 {
@@ -275,6 +272,28 @@ namespace BTLBinh
                 }
             }
         }
+        public void LoadDataSanPham()
+        {
+            // Lấy dữ liệu sản phẩm từ cơ sở dữ liệu
+            DataTable products = dataProcess.GetDanhMuc(); // Giả sử phương thức này trả về một DataTable chứa tất cả sản phẩm
+            dgvDanhSach.DataSource = products;
+
+            // Tạo một cột mới để lưu số lượng nếu chưa có
+            if (!products.Columns.Contains("SoLuong"))
+            {
+                products.Columns.Add("SoLuong", typeof(int));
+            }
+
+            // Tính toán số lượng sản phẩm cho từng sản phẩm
+            foreach (DataRow row in products.Rows)
+            {
+                string productCode = row["MaSP"].ToString(); // Giả sử "MaSP" là mã sản phẩm
+                int quantity = CalculateAndUpdateProductQuantity(productCode); // Gọi phương thức tính số lượng
+                row["SoLuong"] = quantity; // Cập nhật cột số lượng
+            }
+
+            dgvDanhSach.Refresh(); // Làm mới DataGridView để hiển thị dữ liệu mớ
+        }
 
         public void Add(string imagePath = null)
         {
@@ -424,7 +443,7 @@ namespace BTLBinh
                 string columnName;
                 if (columnMappings.TryGetValue(textBoxes[i].Name, out columnName))
                 {
-                    query += $"{columnName} = '{textBoxes[i].Text}', ";
+                    query += $"{columnName} = N'{textBoxes[i].Text}', ";
                     hasChanged = true; // Đánh dấu có sự thay đổi
                 }
             }
@@ -575,12 +594,15 @@ namespace BTLBinh
                 string query = $"SELECT * FROM {tableName}";
                 DataTable dt = dataProcess.DataConnect(query);
                 dgvDanhSach.DataSource = dt != null ? dt : throw new Exception("Không có dữ liệu!");
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}");
             }
         }
+
+
         public void Search(string searchTerm)
         {
             string query = ""; // Khai báo biến query ở ngoài để có thể sử dụng sau này
@@ -825,6 +847,47 @@ namespace BTLBinh
 
             // Nếu không có mã nào, trả về mã đầu tiên
             return $"{prefix}001"; // Trả về mã đầu tiên nếu không có mã nào
+        }
+        public int CalculateAndUpdateProductQuantity(string productCode)
+        {
+            // Truy vấn tất cả chi tiết hóa đơn nhập cho sản phẩm
+            DataTable purchaseDetails = dataProcess.GetChiTietHDTinhTong("CHITIETHDN", "MaSP", productCode);
+
+            // Truy vấn tất cả chi tiết hóa đơn bán cho sản phẩm
+            DataTable salesDetails = dataProcess.GetChiTietHDTinhTong("CHITIETHDB", "MaSP", productCode);
+
+            // Tính tổng số lượng đã mua
+            int totalPurchased = purchaseDetails.AsEnumerable()
+                .Sum(row => row.Field<int>("SoLuong"));
+
+            // Tính tổng số lượng đã bán
+            int totalSold = salesDetails.AsEnumerable()
+                .Sum(row => row.Field<int>("SoLuong"));
+
+            // Tính số lượng còn lại
+            int remainingQuantity = totalPurchased - totalSold;
+
+            // Cập nhật số lượng còn lại vào cơ sở dữ liệu
+            UpdateProductQuantityInDatabase(productCode, remainingQuantity);
+
+            // Trả về số lượng còn lại
+            return remainingQuantity; // Trả về số lượng đã tính toán
+        }
+
+        // Phương thức cập nhật số lượng sản phẩm vào cơ sở dữ liệu
+        private void UpdateProductQuantityInDatabase(string productCode, int quantity)
+        {
+            string query = $"UPDATE SANPHAM SET SoLuong = {quantity} WHERE MaSP = '{productCode}'";
+
+            try
+            {
+                dataProcess.ExecuteQuery(query); // Thực hiện truy vấn cập nhật
+                Console.WriteLine($"Cập nhật số lượng cho sản phẩm {productCode} thành công: {quantity}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi cập nhật số lượng sản phẩm: {ex.Message}");
+            }
         }
     }
 }

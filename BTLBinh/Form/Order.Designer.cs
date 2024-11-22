@@ -37,6 +37,8 @@
             this.btBan08 = new System.Windows.Forms.Button();
             this.btBan09 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbPayment = new System.Windows.Forms.ComboBox();
             this.txtLuuThongTin = new System.Windows.Forms.Button();
             this.btHuyHoaDon = new System.Windows.Forms.Button();
             this.btYeuCauThanhToan = new System.Windows.Forms.Button();
@@ -47,7 +49,7 @@
             this.btThem = new System.Windows.Forms.Button();
             this.btChonMon = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMaKhachHang = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
@@ -63,6 +65,8 @@
             this.oRDERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btBan01 = new System.Windows.Forms.Button();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.lbLogout = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hoaDon)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -71,10 +75,9 @@
             // btBan02
             // 
             this.btBan02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan02.Location = new System.Drawing.Point(691, 41);
-            this.btBan02.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan02.Location = new System.Drawing.Point(518, 33);
             this.btBan02.Name = "btBan02";
-            this.btBan02.Size = new System.Drawing.Size(260, 217);
+            this.btBan02.Size = new System.Drawing.Size(195, 176);
             this.btBan02.TabIndex = 2;
             this.btBan02.Text = "Bàn 02";
             this.btBan02.UseVisualStyleBackColor = false;
@@ -83,10 +86,9 @@
             // btBan03
             // 
             this.btBan03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan03.Location = new System.Drawing.Point(1003, 41);
-            this.btBan03.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan03.Location = new System.Drawing.Point(752, 33);
             this.btBan03.Name = "btBan03";
-            this.btBan03.Size = new System.Drawing.Size(260, 217);
+            this.btBan03.Size = new System.Drawing.Size(195, 176);
             this.btBan03.TabIndex = 3;
             this.btBan03.Text = "Bàn 03";
             this.btBan03.UseVisualStyleBackColor = false;
@@ -95,10 +97,9 @@
             // btBan04
             // 
             this.btBan04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan04.Location = new System.Drawing.Point(383, 338);
-            this.btBan04.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan04.Location = new System.Drawing.Point(287, 275);
             this.btBan04.Name = "btBan04";
-            this.btBan04.Size = new System.Drawing.Size(260, 217);
+            this.btBan04.Size = new System.Drawing.Size(195, 176);
             this.btBan04.TabIndex = 4;
             this.btBan04.Text = "Bàn 04";
             this.btBan04.UseVisualStyleBackColor = false;
@@ -107,10 +108,9 @@
             // btBan05
             // 
             this.btBan05.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan05.Location = new System.Drawing.Point(691, 338);
-            this.btBan05.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan05.Location = new System.Drawing.Point(518, 275);
             this.btBan05.Name = "btBan05";
-            this.btBan05.Size = new System.Drawing.Size(260, 217);
+            this.btBan05.Size = new System.Drawing.Size(195, 176);
             this.btBan05.TabIndex = 5;
             this.btBan05.Text = "Bàn 05";
             this.btBan05.UseVisualStyleBackColor = false;
@@ -119,10 +119,9 @@
             // btBan06
             // 
             this.btBan06.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan06.Location = new System.Drawing.Point(1003, 338);
-            this.btBan06.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan06.Location = new System.Drawing.Point(752, 275);
             this.btBan06.Name = "btBan06";
-            this.btBan06.Size = new System.Drawing.Size(260, 217);
+            this.btBan06.Size = new System.Drawing.Size(195, 176);
             this.btBan06.TabIndex = 6;
             this.btBan06.Text = "Bàn 06";
             this.btBan06.UseVisualStyleBackColor = false;
@@ -131,10 +130,9 @@
             // btBan07
             // 
             this.btBan07.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan07.Location = new System.Drawing.Point(383, 655);
-            this.btBan07.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan07.Location = new System.Drawing.Point(287, 532);
             this.btBan07.Name = "btBan07";
-            this.btBan07.Size = new System.Drawing.Size(260, 217);
+            this.btBan07.Size = new System.Drawing.Size(195, 176);
             this.btBan07.TabIndex = 7;
             this.btBan07.Text = "Bàn 07";
             this.btBan07.UseVisualStyleBackColor = false;
@@ -143,10 +141,9 @@
             // btBan08
             // 
             this.btBan08.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan08.Location = new System.Drawing.Point(691, 655);
-            this.btBan08.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan08.Location = new System.Drawing.Point(518, 532);
             this.btBan08.Name = "btBan08";
-            this.btBan08.Size = new System.Drawing.Size(260, 217);
+            this.btBan08.Size = new System.Drawing.Size(195, 176);
             this.btBan08.TabIndex = 8;
             this.btBan08.Text = "Bàn 08";
             this.btBan08.UseVisualStyleBackColor = false;
@@ -155,10 +152,9 @@
             // btBan09
             // 
             this.btBan09.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan09.Location = new System.Drawing.Point(1003, 655);
-            this.btBan09.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan09.Location = new System.Drawing.Point(752, 532);
             this.btBan09.Name = "btBan09";
-            this.btBan09.Size = new System.Drawing.Size(260, 217);
+            this.btBan09.Size = new System.Drawing.Size(195, 176);
             this.btBan09.TabIndex = 9;
             this.btBan09.Text = "Bàn 09";
             this.btBan09.UseVisualStyleBackColor = false;
@@ -166,6 +162,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbPayment);
             this.groupBox1.Controls.Add(this.txtLuuThongTin);
             this.groupBox1.Controls.Add(this.btHuyHoaDon);
             this.groupBox1.Controls.Add(this.btYeuCauThanhToan);
@@ -176,21 +174,39 @@
             this.groupBox1.Controls.Add(this.btThem);
             this.groupBox1.Controls.Add(this.btChonMon);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtMaKhachHang);
+            this.groupBox1.Controls.Add(this.txtSoDienThoai);
             this.groupBox1.Controls.Add(this.txtMaNhanVien);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtMaHoaDon);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lbSoBan);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1285, 41);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(964, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(627, 891);
+            this.groupBox1.Size = new System.Drawing.Size(470, 686);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(58, 594);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(234, 18);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Chọn phương thức thanh toán ";
+            // 
+            // cbPayment
+            // 
+            this.cbPayment.FormattingEnabled = true;
+            this.cbPayment.Location = new System.Drawing.Point(296, 587);
+            this.cbPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbPayment.Name = "cbPayment";
+            this.cbPayment.Size = new System.Drawing.Size(129, 26);
+            this.cbPayment.TabIndex = 19;
             // 
             // txtLuuThongTin
             // 
@@ -198,10 +214,9 @@
             this.txtLuuThongTin.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.txtLuuThongTin.Image = global::BTLBinh.Properties.Resources.diskette;
             this.txtLuuThongTin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtLuuThongTin.Location = new System.Drawing.Point(120, 762);
-            this.txtLuuThongTin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLuuThongTin.Location = new System.Drawing.Point(61, 530);
             this.txtLuuThongTin.Name = "txtLuuThongTin";
-            this.txtLuuThongTin.Size = new System.Drawing.Size(225, 50);
+            this.txtLuuThongTin.Size = new System.Drawing.Size(169, 41);
             this.txtLuuThongTin.TabIndex = 18;
             this.txtLuuThongTin.Text = "       Lưu thông tin ";
             this.txtLuuThongTin.UseVisualStyleBackColor = false;
@@ -213,10 +228,9 @@
             this.btHuyHoaDon.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btHuyHoaDon.Image = global::BTLBinh.Properties.Resources.x_button;
             this.btHuyHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btHuyHoaDon.Location = new System.Drawing.Point(379, 762);
-            this.btHuyHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btHuyHoaDon.Location = new System.Drawing.Point(258, 530);
             this.btHuyHoaDon.Name = "btHuyHoaDon";
-            this.btHuyHoaDon.Size = new System.Drawing.Size(207, 50);
+            this.btHuyHoaDon.Size = new System.Drawing.Size(155, 41);
             this.btHuyHoaDon.TabIndex = 17;
             this.btHuyHoaDon.Text = "Hủy hóa đơn ";
             this.btHuyHoaDon.UseVisualStyleBackColor = false;
@@ -228,10 +242,9 @@
             this.btYeuCauThanhToan.BackColor = System.Drawing.Color.Cyan;
             this.btYeuCauThanhToan.Image = global::BTLBinh.Properties.Resources.visa;
             this.btYeuCauThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btYeuCauThanhToan.Location = new System.Drawing.Point(215, 833);
-            this.btYeuCauThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btYeuCauThanhToan.Location = new System.Drawing.Point(154, 639);
             this.btYeuCauThanhToan.Name = "btYeuCauThanhToan";
-            this.btYeuCauThanhToan.Size = new System.Drawing.Size(284, 50);
+            this.btYeuCauThanhToan.Size = new System.Drawing.Size(213, 41);
             this.btYeuCauThanhToan.TabIndex = 12;
             this.btYeuCauThanhToan.Text = "      Yêu cầu thanh toán";
             this.btYeuCauThanhToan.UseVisualStyleBackColor = false;
@@ -239,10 +252,10 @@
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(344, 687);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTongTien.Location = new System.Drawing.Point(296, 492);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(212, 29);
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(160, 24);
             this.txtTongTien.TabIndex = 16;
             // 
             // label6
@@ -250,10 +263,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(116, 687);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(133, 492);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 24);
+            this.label6.Size = new System.Drawing.Size(83, 18);
             this.label6.TabIndex = 15;
             this.label6.Text = "Tổng tiền ";
             // 
@@ -261,11 +273,10 @@
             // 
             this.dgv_hoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_hoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_hoaDon.Location = new System.Drawing.Point(16, 375);
-            this.dgv_hoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_hoaDon.Location = new System.Drawing.Point(12, 242);
             this.dgv_hoaDon.Name = "dgv_hoaDon";
             this.dgv_hoaDon.RowHeadersWidth = 51;
-            this.dgv_hoaDon.Size = new System.Drawing.Size(603, 277);
+            this.dgv_hoaDon.Size = new System.Drawing.Size(452, 225);
             this.dgv_hoaDon.TabIndex = 14;
             this.dgv_hoaDon.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hoaDon_CellEndEdit_1);
             // 
@@ -275,10 +286,9 @@
             this.btXoa.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btXoa.Image = global::BTLBinh.Properties.Resources.delete;
             this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(443, 310);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btXoa.Location = new System.Drawing.Point(338, 197);
             this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(115, 47);
+            this.btXoa.Size = new System.Drawing.Size(86, 38);
             this.btXoa.TabIndex = 13;
             this.btXoa.Text = "Xóa ";
             this.btXoa.UseVisualStyleBackColor = false;
@@ -290,10 +300,9 @@
             this.btThem.BackColor = System.Drawing.Color.LemonChiffon;
             this.btThem.Image = global::BTLBinh.Properties.Resources.plus;
             this.btThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThem.Location = new System.Drawing.Point(269, 310);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThem.Location = new System.Drawing.Point(207, 197);
             this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(131, 47);
+            this.btThem.Size = new System.Drawing.Size(98, 38);
             this.btThem.TabIndex = 12;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = false;
@@ -305,10 +314,9 @@
             this.btChonMon.BackColor = System.Drawing.Color.SpringGreen;
             this.btChonMon.Image = global::BTLBinh.Properties.Resources.feature_selection;
             this.btChonMon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btChonMon.Location = new System.Drawing.Point(39, 310);
-            this.btChonMon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btChonMon.Location = new System.Drawing.Point(34, 197);
             this.btChonMon.Name = "btChonMon";
-            this.btChonMon.Size = new System.Drawing.Size(168, 47);
+            this.btChonMon.Size = new System.Drawing.Size(126, 38);
             this.btChonMon.TabIndex = 11;
             this.btChonMon.Text = "Chọn món";
             this.btChonMon.UseVisualStyleBackColor = false;
@@ -317,54 +325,49 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 192);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(26, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 24);
+            this.label4.Size = new System.Drawing.Size(106, 18);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Mã khách hàng";
+            this.label4.Text = "Số Điện Thoại ";
             // 
-            // txtMaKhachHang
+            // txtSoDienThoai
             // 
-            this.txtMaKhachHang.Location = new System.Drawing.Point(269, 185);
-            this.txtMaKhachHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(287, 29);
-            this.txtMaKhachHang.TabIndex = 7;
+            this.txtSoDienThoai.Location = new System.Drawing.Point(202, 154);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(216, 24);
+            this.txtSoDienThoai.TabIndex = 7;
             // 
             // txtMaNhanVien
             // 
-            this.txtMaNhanVien.Location = new System.Drawing.Point(269, 137);
-            this.txtMaNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNhanVien.Location = new System.Drawing.Point(202, 111);
             this.txtMaNhanVien.Name = "txtMaNhanVien";
-            this.txtMaNhanVien.Size = new System.Drawing.Size(287, 29);
+            this.txtMaNhanVien.ReadOnly = true;
+            this.txtMaNhanVien.Size = new System.Drawing.Size(216, 24);
             this.txtMaNhanVien.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(26, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 24);
+            this.label3.Size = new System.Drawing.Size(95, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Mã nhân viên";
             // 
             // txtMaHoaDon
             // 
-            this.txtMaHoaDon.Location = new System.Drawing.Point(269, 76);
-            this.txtMaHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaHoaDon.Location = new System.Drawing.Point(202, 62);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
-            this.txtMaHoaDon.Size = new System.Drawing.Size(287, 29);
+            this.txtMaHoaDon.Size = new System.Drawing.Size(216, 24);
             this.txtMaHoaDon.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 78);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 24);
+            this.label1.Size = new System.Drawing.Size(91, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã hóa đơn ";
             // 
@@ -372,10 +375,9 @@
             // 
             this.lbSoBan.AutoSize = true;
             this.lbSoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoBan.Location = new System.Drawing.Point(35, 39);
-            this.lbSoBan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSoBan.Location = new System.Drawing.Point(26, 32);
             this.lbSoBan.Name = "lbSoBan";
-            this.lbSoBan.Size = new System.Drawing.Size(102, 24);
+            this.lbSoBan.Size = new System.Drawing.Size(84, 18);
             this.lbSoBan.TabIndex = 0;
             this.lbSoBan.Text = "Bàn số 01";
             // 
@@ -488,28 +490,49 @@
             this.oRDERToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 31, 0, 31);
-            this.menuStrip1.Size = new System.Drawing.Size(267, 1055);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 25, 0, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(266, 769);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btBan01
             // 
             this.btBan01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btBan01.Location = new System.Drawing.Point(383, 44);
-            this.btBan01.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBan01.Location = new System.Drawing.Point(287, 36);
             this.btBan01.Name = "btBan01";
-            this.btBan01.Size = new System.Drawing.Size(260, 213);
+            this.btBan01.Size = new System.Drawing.Size(195, 173);
             this.btBan01.TabIndex = 1;
             this.btBan01.Text = "Bàn 01";
             this.btBan01.UseVisualStyleBackColor = false;
             this.btBan01.Click += new System.EventHandler(this.btBan01_Click);
             // 
+            // lbUser
+            // 
+            this.lbUser.AutoSize = true;
+            this.lbUser.Location = new System.Drawing.Point(1257, 9);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(35, 13);
+            this.lbUser.TabIndex = 11;
+            this.lbUser.Text = "label5";
+            // 
+            // lbLogout
+            // 
+            this.lbLogout.AutoSize = true;
+            this.lbLogout.ForeColor = System.Drawing.Color.Red;
+            this.lbLogout.Location = new System.Drawing.Point(1257, 36);
+            this.lbLogout.Name = "lbLogout";
+            this.lbLogout.Size = new System.Drawing.Size(56, 13);
+            this.lbLogout.TabIndex = 12;
+            this.lbLogout.Text = "Đăng xuất";
+            this.lbLogout.Click += new System.EventHandler(this.lbLogout_Click);
+            // 
             // Order
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1435, 769);
+            this.Controls.Add(this.lbLogout);
+            this.Controls.Add(this.lbUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btBan09);
             this.Controls.Add(this.btBan08);
@@ -522,7 +545,6 @@
             this.Controls.Add(this.btBan01);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";
@@ -562,7 +584,7 @@
         private System.Windows.Forms.TextBox txtMaHoaDon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaKhachHang;
+        private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.TextBox txtMaNhanVien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btThem;
@@ -574,5 +596,9 @@
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button txtLuuThongTin;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbPayment;
+        private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.Label lbLogout;
     }
 }

@@ -15,7 +15,10 @@ namespace BTLBinh
     {
         private DataProcess dataProcess;
         // public DataGridView dgvDanhSach;
-        MenuItems menu = new MenuItems();
+        MenuItems menu;
+        string diaChiKH = "";
+        string tenNhanVien;
+        string maNhanVien;
 
         Boolean checkBan01 = false;
         Boolean checkBan02 = false;
@@ -46,6 +49,10 @@ namespace BTLBinh
         private List<OrderItem> hoaDonList7 = new List<OrderItem>();
         private List<OrderItem> hoaDonList8 = new List<OrderItem>();
         private List<OrderItem> hoaDonList9 = new List<OrderItem>();
+
+        private List<string> ProductNames;  // Danh sách tên sản phẩm từ FormMenu
+        private List<int> ProductQuantities; // Danh sách số lượng sản phẩm từ FormMenu
+
 
         public Order()
         {
@@ -78,6 +85,19 @@ namespace BTLBinh
 
             // Khởi tạo datagridview
             SetupDataGridView();
+
+            // Thiết lập ComboBox chỉ có thể chọn giá trị từ danh sách
+            cbPayment.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            cbPayment.Items.Add("Tiền mặt");
+            cbPayment.Items.Add("Chuyển khoản");
+
+            txtMaNhanVien.Text = User.CurrentEmployeeId;
+
+            tenNhanVien = User.CurrentEmployeeName;
+            maNhanVien = User.CurrentEmployeeId;
+            lbUser.Text = "Mã NV: " + maNhanVien + " - " + "Tên NV: " + tenNhanVien;
+
         }
 
         private void Order_Load(object sender, EventArgs e)
@@ -168,37 +188,47 @@ namespace BTLBinh
         {
             foreach (Control control in groupBox.Controls)
             {
-                if (control is TextBox)
+                if (control is TextBox textBox)
                 {
-                    ((TextBox)control).Text = string.Empty; // Đặt giá trị của TextBox là rỗng
+                    if (textBox.Name == "txtMaNhanVien")
+                    {
+                        textBox.Text = User.CurrentEmployeeId; // Đặt giá trị của txtmaNhanVien là User.id
+                    }
+                    else
+                    {
+                        textBox.Text = string.Empty; // Đặt giá trị của các TextBox khác là rỗng
+                    }
                 }
-                else if (control is DateTimePicker)
+                else if (control is DateTimePicker dateTimePicker)
                 {
-                    ((DateTimePicker)control).Value = DateTime.Now; // Đặt giá trị của DateTimePicker là ngày hiện tại
+                    dateTimePicker.Value = DateTime.Now; // Đặt giá trị của DateTimePicker là ngày hiện tại
                 }
-                else if (control is DataGridView)
+                else if (control is DataGridView dataGridView)
                 {
-                    ((DataGridView)control).Rows.Clear(); // Xóa tất cả các hàng trong DataGridView
+                    dataGridView.Rows.Clear(); // Xóa tất cả các hàng trong DataGridView
                 }
             }
         }
 
+
         private void buttonColor(Button btn)
         {
-            btn.BackColor = Color.Yellow;
+            btn.BackColor = Color.FromArgb(255, 128, 128);
+            btn.ForeColor = Color.Snow;
         }
 
         private void ResetButtonColor(Button btn)
         {
             btn.BackColor = Color.FromArgb(224, 224, 224);
+            btn.ForeColor = Color.Black;
         }
 
         // Phương thức dùng để hiển thị dữ liệu hóa đơn lên các control
         private void LoadHoaDon(HoaDon hoaDon, List<OrderItem> hoaDonList)
         {
             txtMaHoaDon.Text = hoaDon.MaHoaDon;
-            txtMaNhanVien.Text = hoaDon.MaNhanVien;
-            txtMaKhachHang.Text = hoaDon.MaKhachHang;
+            txtMaNhanVien.Text = User.CurrentEmployeeId;
+            txtSoDienThoai.Text = hoaDon.SoDienThoai;
 
             dgv_hoaDon.Rows.Clear();  // Xóa tất cả các hàng hiện có trong DataGridView
 
@@ -212,19 +242,19 @@ namespace BTLBinh
         private void UpdateHoaDon(HoaDon hoaDon)
         {
             hoaDon.MaHoaDon = txtMaHoaDon.Text;
-            hoaDon.MaNhanVien = txtMaNhanVien.Text;
-            hoaDon.MaKhachHang = txtMaKhachHang.Text;
+            hoaDon.MaNhanVien = User.CurrentEmployeeId;
+            hoaDon.SoDienThoai = txtSoDienThoai.Text;
         }
 
         private void DeleteHoaDon(HoaDon hoaDon)
         {
             hoaDon.MaHoaDon = null;
             hoaDon.MaNhanVien = null;
-            hoaDon.MaKhachHang = null;
+            hoaDon.SoDienThoai = null;
 
             txtMaHoaDon.Text = "";
-            txtMaNhanVien.Text = "";
-            txtMaKhachHang.Text = "";
+            txtMaNhanVien.Text = User.CurrentEmployeeId;
+            txtSoDienThoai.Text = "";
             SetupDataGridView();
         }
 
@@ -270,19 +300,15 @@ namespace BTLBinh
 
                 decimal thanhTien = 0;
                 string thanhTienValue = row.Cells[2].Value?.ToString();
-                Console.WriteLine($"Thành tiền trong cột: {thanhTienValue}");
 
                 if (decimal.TryParse(thanhTienValue, out thanhTien))
                 {
-                    Console.WriteLine($"Thành tiền đã chuyển đổi: {thanhTien}");
 
                     decimal khuyenMai = 0;
                     string khuyenMaiValue = row.Cells[3].Value?.ToString();
-                    Console.WriteLine($"Khuyến mãi trong cột: {khuyenMaiValue}");
 
                     if (decimal.TryParse(khuyenMaiValue, out khuyenMai))
                     {
-                        Console.WriteLine($"Khuyến mãi: {khuyenMai}%");
 
                         decimal thanhTienSauKhuyenMai = thanhTien * (1 - khuyenMai / 100);
                         totalAmount += thanhTienSauKhuyenMai;
@@ -294,14 +320,12 @@ namespace BTLBinh
                 }
                 else
                 {
-                    Console.WriteLine("Thành tiền không hợp lệ");
                 }
             }
 
             // Cập nhật tổng tiền vào TextBox
             txtTongTien.Text = totalAmount.ToString("N0");
 
-            Console.WriteLine($"Tổng tiền: {totalAmount}");
         }
 
         private void SaveDataToList(List<OrderItem> hoaDonList)
@@ -349,23 +373,25 @@ namespace BTLBinh
             }
         }
 
-        public string TextBoxData
-        {
-            get { return txtTongTien.Text; }
-        }
 
         private void Payment_ButtonClicked(object sender, EventArgs e)
         {
-            // Hành động khi nhận được thông báo từ Form2
+            // Gọi phương thức SaveToCsdl và truyền địa chỉ khách hàng
+            SaveToCsdl();
+        }
+
+        private void Cash_buttonClicked(object sender, EventArgs e)
+        {
+            // Gọi phương thức SaveToCsdl và truyền địa chỉ khách hàng
             SaveToCsdl();
         }
 
         private void SaveToCsdl()
         {
-            var dataProcess = new DataProcess(); // Khởi tạo DataProcess
+            var dataProcess = new DataProcess();
             string maHDB = txtMaHoaDon.Text;
             string maNV = txtMaNhanVien.Text;
-            string maKH = txtMaKhachHang.Text;
+            string soDienThoai = txtSoDienThoai.Text;
             decimal tongTien;
 
             // Kiểm tra và chuyển đổi giá trị từ TextBox tổng tiền
@@ -376,50 +402,66 @@ namespace BTLBinh
             }
             DateTime ngayBan = DateTime.Now;
 
-            // Lấy thông tin chi tiết từ DataGridView
-            List<(string maSP, int soLuong, decimal thanhTien, float khuyenMai)> chiTietHDB = new List<(string, int, decimal, float)>();
-            foreach (DataGridViewRow row in dgv_hoaDon.Rows)
-            {
-                if (row.Cells["SoLuong"].Value != null && row.Cells["ThanhTien"].Value != null && row.Cells["KhuyenMai"].Value != null)
-                {
-                    string tenSP = row.Cells["SanPham"].Value.ToString(); // Tên sản phẩm
-                    int soLuong;
-                    decimal thanhTien;
-                    float khuyenMai;
-
-                    // Kiểm tra và chuyển đổi kiểu dữ liệu an toàn
-                    if (!int.TryParse(row.Cells["SoLuong"].Value.ToString(), out soLuong) ||
-                        !decimal.TryParse(row.Cells["ThanhTien"].Value.ToString(), out thanhTien) ||
-                        !float.TryParse(row.Cells["KhuyenMai"].Value.ToString(), out khuyenMai))
-                    {
-                        MessageBox.Show("Dữ liệu trong DataGridView không hợp lệ!");
-                        return;
-                    }
-
-                    // Kiểm tra xem tên sản phẩm có trong Dictionary không
-                    if (columnMappings.ContainsValue(tenSP))
-                    {
-                        string maSP = columnMappings.FirstOrDefault(x => x.Value == tenSP).Key; // Lấy mã sản phẩm từ Dictionary
-
-                        chiTietHDB.Add((maSP, soLuong, thanhTien, khuyenMai));
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Sản phẩm '{tenSP}' không tồn tại trong hệ thống.");
-                        return;
-                    }
-                }
-            }
-
-            // Sử dụng Transaction để đảm bảo tính toàn vẹn dữ liệu
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-6C4ON0I\SQLEXPRESS;Initial Catalog=LTTQ;Integrated Security=True;"))
             {
                 connection.Open();
+
+                string maKH = "";
+
+                // Kiểm tra mã khách hàng và thêm địa chỉ nếu cần
+                string checkMaKHQuery = "SELECT MaKH FROM KHACHHANG WHERE SDT = @SDT";
+                using (SqlCommand checkCmd = new SqlCommand(checkMaKHQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@SDT", soDienThoai);
+                    var result = checkCmd.ExecuteScalar();
+
+                    if (result != null) // Nếu tìm thấy khách hàng
+                    {
+                        maKH = result.ToString(); // Lấy mã khách hàng
+                    }
+                    else
+                    {
+                        // Thêm khách hàng mới nếu không tồn tại
+                        string getMaxMaKHQuery = "SELECT TOP 1 MaKH FROM KHACHHANG ORDER BY MaKH DESC";
+                        maKH = "KH001"; // Mã mặc định nếu chưa có khách hàng nào
+
+                        using (SqlCommand getMaxCmd = new SqlCommand(getMaxMaKHQuery, connection))
+                        {
+                            var maxResult = getMaxCmd.ExecuteScalar();
+                            if (maxResult != null)
+                            {
+                                string lastMaKH = maxResult.ToString();
+                                int numberPart = int.Parse(lastMaKH.Substring(2));
+                                maKH = "KH" + (numberPart + 1).ToString("D3");
+                            }
+                        }
+
+                        // Kiểm tra xem địa chỉ có được nhập không
+                        if (!string.IsNullOrEmpty(diaChiKH))
+                        {
+                            string insertKHQuery = "INSERT INTO KHACHHANG (MaKH, SDT, DiaChi) VALUES (@MaKH, @SDT, @DiaChi)";
+                            using (SqlCommand insertCmd = new SqlCommand(insertKHQuery, connection))
+                            {
+                                insertCmd.Parameters.AddWithValue("@MaKH", maKH);
+                                insertCmd.Parameters.AddWithValue("@SDT", soDienThoai);
+                                insertCmd.Parameters.AddWithValue("@DiaChi", diaChiKH);
+                                insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bạn chưa nhập địa chỉ cho khách hàng mới!");
+                            return;
+                        }
+                    }
+                }
+
+
                 SqlTransaction transaction = connection.BeginTransaction();
 
                 try
                 {
-                    // Câu lệnh SQL để thêm vào bảng HOADONBAN với tham số
+                    // Thêm vào bảng HOADONBAN
                     string insertHoaDonQuery = "INSERT INTO HOADONBAN (MaHDB, MaNV, MaKH, TongTien, NgayBan) " +
                                                "VALUES (@MaHDB, @MaNV, @MaKH, @TongTien, @NgayBan)";
                     using (SqlCommand cmd = new SqlCommand(insertHoaDonQuery, connection, transaction))
@@ -429,13 +471,46 @@ namespace BTLBinh
                         cmd.Parameters.AddWithValue("@MaKH", maKH);
                         cmd.Parameters.AddWithValue("@TongTien", tongTien);
                         cmd.Parameters.AddWithValue("@NgayBan", ngayBan);
-
                         cmd.ExecuteNonQuery();
                     }
 
-                    // Câu lệnh SQL để thêm vào bảng CHITIETHDB với tham số
+                    // Thêm chi tiết hóa đơn vào CHITIETHDB
+                    List<(string maSP, int soLuong, decimal thanhTien, float khuyenMai)> chiTietHDB = new List<(string, int, decimal, float)>();
+                    foreach (DataGridViewRow row in dgv_hoaDon.Rows)
+                    {
+                        if (row.Cells["SoLuong"].Value != null && row.Cells["ThanhTien"].Value != null && row.Cells["KhuyenMai"].Value != null)
+                        {
+                            string tenSP = row.Cells["SanPham"].Value.ToString();
+                            int soLuong;
+                            decimal thanhTien;
+                            float khuyenMai;
+
+                            // Kiểm tra dữ liệu
+                            if (!int.TryParse(row.Cells["SoLuong"].Value.ToString(), out soLuong) ||
+                                !decimal.TryParse(row.Cells["ThanhTien"].Value.ToString(), out thanhTien) ||
+                                !float.TryParse(row.Cells["KhuyenMai"].Value.ToString(), out khuyenMai))
+                            {
+                                MessageBox.Show("Dữ liệu trong DataGridView không hợp lệ!");
+                                return;
+                            }
+
+                            // Kiểm tra sản phẩm trong Dictionary
+                            if (columnMappings.ContainsValue(tenSP))
+                            {
+                                string maSP = columnMappings.FirstOrDefault(x => x.Value == tenSP).Key;
+                                chiTietHDB.Add((maSP, soLuong, thanhTien, khuyenMai));
+                            }
+                            else
+                            {
+                                MessageBox.Show($"Sản phẩm '{tenSP}' không tồn tại trong hệ thống.");
+                                return;
+                            }
+                        }
+                    }
+
                     foreach (var item in chiTietHDB)
                     {
+                        // Thêm chi tiết hóa đơn vào bảng CHITIETHDB
                         string insertChiTietQuery = "INSERT INTO CHITIETHDB (MaHDB, MaSP, SoLuong, ThanhTien, KhuyenMai) " +
                                                     "VALUES (@MaHDB, @MaSP, @SoLuong, @ThanhTien, @KhuyenMai)";
                         using (SqlCommand cmd = new SqlCommand(insertChiTietQuery, connection, transaction))
@@ -445,15 +520,23 @@ namespace BTLBinh
                             cmd.Parameters.AddWithValue("@SoLuong", item.soLuong);
                             cmd.Parameters.AddWithValue("@ThanhTien", item.thanhTien);
                             cmd.Parameters.AddWithValue("@KhuyenMai", item.khuyenMai);
-
                             cmd.ExecuteNonQuery();
+                        }
+
+                        // Trừ số lượng sản phẩm trong bảng SANPHAM
+                        string updateSanPhamQuery = "UPDATE SANPHAM SET SoLuong = SoLuong - @SoLuong WHERE MaSP = @MaSP";
+                        using (SqlCommand updateCmd = new SqlCommand(updateSanPhamQuery, connection, transaction))
+                        {
+                            updateCmd.Parameters.AddWithValue("@SoLuong", item.soLuong);
+                            updateCmd.Parameters.AddWithValue("@MaSP", item.maSP);
+                            updateCmd.ExecuteNonQuery();
                         }
                     }
 
-                    // Commit transaction nếu thành công
+
                     transaction.Commit();
                     MessageBox.Show("Thanh toán thành công!");
-                    SetupDataGridView(); // Làm mới DataGridView
+                    SetupDataGridView();
                 }
                 catch (Exception ex)
                 {
@@ -462,7 +545,7 @@ namespace BTLBinh
                 }
             }
 
-            // Tiến hành hủy hóa đơn 
+            // Xóa hóa đơn nếu thanh toán thành công
             if (lbSoBan.Text == "Bàn số 01")
             {
                 DeleteHoaDon(hoaDon01);
@@ -517,12 +600,164 @@ namespace BTLBinh
                 checkBan09 = false;
                 ResetButtonColor(btBan09);
             }
+            diaChiKH = "";
         }
 
-        public void ResetTable()
+        private void menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (menu != null)
+            {
+                this.ProductNames = menu.ProductNames;  // Lấy danh sách tên sản phẩm
+                this.ProductQuantities = menu.ProductQuantities; // Lấy danh sách số lượng sản phẩm
+            }
+            else
+            {
+                MessageBox.Show("menu rong");
+            }
+
+            // Gọi phương thức xử lý danh sách sau khi form đóng
+            XuLyDanhSachTextBox();
+
+        }
+
+        private int GetAvailableProductQuantity(string productName)
+        {
+            // Truy vấn số lượng sản phẩm hiện có trong bảng SANPHAM
+            int availableQuantity = 0;
+            string query = "SELECT SoLuong FROM SANPHAM WHERE TenSP = @TenSP"; // Giả sử tên sản phẩm là TenSP trong bảng SANPHAM
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-6C4ON0I\SQLEXPRESS;Initial Catalog=LTTQ;Integrated Security=True;"))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TenSP", productName);
+                    var result = command.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        availableQuantity = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return availableQuantity;
+        }
+
+
+        private void XuLyDanhSachTextBox()
+        {
+            if (ProductNames != null && ProductQuantities != null)
+            {
+                for (int i = 0; i < ProductNames.Count; i++)
+                {
+                    int quantity = ProductQuantities[i];
+                    if (quantity > 0)
+                    {
+                        // Kiểm tra số lượng sản phẩm trong bảng SANPHAM
+                        int availableQuantity = GetAvailableProductQuantity(ProductNames[i]);
+                        if (availableQuantity < quantity)
+                        {
+                            MessageBox.Show($"Sản phẩm '{ProductNames[i]}' không đủ số lượng. Số lượng còn lại: {availableQuantity}");
+                            return; // Nếu không đủ số lượng, thoát phương thức
+                        }
+
+                        // Kiểm tra xem sản phẩm đã có trong DataGridView chưa
+                        bool productExists = false;
+                        foreach (DataGridViewRow row in dgv_hoaDon.Rows)
+                        {
+                            if (row.Cells["SanPham"].Value != null && row.Cells["SanPham"].Value.ToString() == ProductNames[i])
+                            {
+                                // Nếu đã có, cộng thêm số lượng vào dòng hiện tại
+                                int existingQuantity = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                                row.Cells["SoLuong"].Value = existingQuantity + quantity;
+
+                                decimal price = GetGiaTien(ProductNames[i]) * (existingQuantity + quantity);
+                                row.Cells["ThanhTien"].Value = price;
+
+                                productExists = true;
+                                break;
+                            }
+                        }
+
+                        // Nếu sản phẩm chưa có, thêm dòng mới vào DataGridView
+                        if (!productExists)
+                        {
+                            int index = dgv_hoaDon.Rows.Add(); // Thêm hàng mới và lấy chỉ số
+
+                            // Thiết lập giá trị cho các ô trong hàng mới
+                            dgv_hoaDon.Rows[index].Cells["SanPham"].Value = ProductNames[i]; // Cột Sản phẩm từ ProductNames
+                            dgv_hoaDon.Rows[index].Cells["SoLuong"].Value = quantity; // Cột Số lượng từ ProductQuantities
+                            decimal price = GetGiaTien(ProductNames[i]) * quantity;
+                            dgv_hoaDon.Rows[index].Cells["ThanhTien"].Value = price; // Cột Thành tiền
+                            dgv_hoaDon.Rows[index].Cells["KhuyenMai"].Value = "0"; // Cột Khuyến mãi, giả định là 0
+                        }
+
+                        // Gọi hàm tính tổng tiền sau khi cập nhật "Thành tiền"
+                        CalculateTotalAmount();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Danh sách giá trị trống hoặc chưa được khởi tạo.");
+            }
+        }
+
+
+        // Hàm mở dialog để nhập địa chỉ khách hàng
+        private void PromptForAddress()
+        {
+            string diaChi = Microsoft.VisualBasic.Interaction.InputBox("Nhập địa chỉ khách hàng:", "Thông Tin Khách Hàng");
+            diaChiKH = diaChi;
+        }
+
+
+        private string kiemTraKhachHang(string soDienThoai)
         {
 
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-6C4ON0I\SQLEXPRESS;Initial Catalog=LTTQ;Integrated Security=True;"))
+            {
+                connection.Open();
+                string checkMaKHQuery = "SELECT COUNT(*) FROM KHACHHANG WHERE SDT = @soDienThoai";
+                using (SqlCommand checkCmd = new SqlCommand(checkMaKHQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@soDienThoai", soDienThoai);
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    // Nếu mã khách hàng không tồn tại, yêu cầu nhập địa chỉ
+                    if (count == 0)
+                    {
+                        PromptForAddress(); // Hàm nhập địa chỉ
+                        if (string.IsNullOrEmpty(diaChiKH))
+                        {
+                            MessageBox.Show("Bạn chưa nhập địa chỉ khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return null;
+                        }
+                    }
+                }
+            }
+
+            return diaChiKH;
         }
+
+        public void logout()
+        {
+            maNhanVien = "";
+            tenNhanVien = "Chưa đăng nhập";
+        }
+
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            // Kiểm tra độ dài là 10 và chỉ chứa số
+            if (phoneNumber.Length == 10 && phoneNumber.All(char.IsDigit))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
 
         //------------------------------------------------------------------------------------------
 
@@ -823,10 +1058,6 @@ namespace BTLBinh
             }
         }
 
-        private void btChonMon_Click(object sender, EventArgs e)
-        {
-            menu.Show();
-        }
 
         private void btThem_Click(object sender, EventArgs e)
         {
@@ -844,8 +1075,8 @@ namespace BTLBinh
 
         private void dgv_hoaDon_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
         {
-            // Kiểm tra xem người dùng vừa hoàn thành chỉnh sửa cột "Tên sản phẩm" (giả sử, cột thứ 0)
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 3) // Nếu là cột "Sản phẩm", "Số lượng" hoặc "Khuyến mãi"
+            // Kiểm tra xem người dùng vừa hoàn thành chỉnh sửa cột "Tên sản phẩm", "Số lượng", hoặc "Khuyến mãi"
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 3)
             {
                 string tenSP = dgv_hoaDon.Rows[e.RowIndex].Cells[0].Value?.ToString();
                 int soLuong = 0;
@@ -860,17 +1091,33 @@ namespace BTLBinh
                 // Lấy số lượng từ cột "Số lượng" (cột thứ 1)
                 if (int.TryParse(dgv_hoaDon.Rows[e.RowIndex].Cells[1].Value?.ToString(), out soLuong))
                 {
+                    // Kiểm tra xem số lượng có vượt quá số lượng trong kho không
+                    int availableQuantity = GetAvailableProductQuantity(tenSP); // Hàm lấy số lượng sản phẩm còn lại
+                    if (soLuong > availableQuantity)
+                    {
+                        // Nếu số lượng nhập vào lớn hơn số lượng trong kho, thông báo và không cập nhật giá trị
+                        MessageBox.Show($"Sản phẩm '{tenSP}' không đủ số lượng. Số lượng còn lại: {availableQuantity}");
+                        dgv_hoaDon.Rows[e.RowIndex].Cells[1].Value = availableQuantity; // Đặt số lượng về số còn lại
+                        return; // Dừng lại không thực hiện tính toán
+                    }
+
                     // Tính thành tiền = Số lượng * Giá
                     decimal thanhTien = gia * soLuong;
 
                     // Cập nhật ô "Thành tiền" (cột thứ 2)
                     dgv_hoaDon.Rows[e.RowIndex].Cells[2].Value = thanhTien;
-                }
 
-                // Gọi hàm tính tổng tiền sau khi cập nhật "Thành tiền"
-                CalculateTotalAmount();
+                    // Gọi hàm tính tổng tiền sau khi cập nhật "Thành tiền"
+                    CalculateTotalAmount();
+                }
+                else
+                {
+                    // Nếu số lượng không hợp lệ, hiển thị thông báo
+                    MessageBox.Show("Số lượng sản phẩm không hợp lệ!");
+                }
             }
         }
+
 
         private void btXoa_Click(object sender, EventArgs e)
         {
@@ -878,7 +1125,7 @@ namespace BTLBinh
             if (dgv_hoaDon.SelectedRows.Count > 0)
             {
                 // Hiển thị hộp thoại xác nhận
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa dòng này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 // Nếu người dùng chọn "Yes"
                 if (result == DialogResult.Yes)
@@ -901,19 +1148,124 @@ namespace BTLBinh
 
         private void btYeuCauThanhToan_Click(object sender, EventArgs e)
         {
+            // Kiểm tra xem đã điền đầy đủ các ô chưa
+            if (txtMaHoaDon.Text == "")
+            {
+                MessageBox.Show("Mã hóa đơn chưa được nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (txtMaNhanVien.Text == "")
+            {
+                MessageBox.Show("Mã nhân viên chưa được nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (txtSoDienThoai.Text == "")
+            {
+                MessageBox.Show("Số điện thoại chưa được nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!IsValidPhoneNumber(txtSoDienThoai.Text))
+            {
+                MessageBox.Show("Số điện thoại nhập không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra nếu mã nhân viên đã tồn tại trong cơ sở dữ liệu
+            string maNV = txtMaNhanVien.Text;
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-6C4ON0I\SQLEXPRESS;Initial Catalog=LTTQ;Integrated Security=True;"))
+            {
+                connection.Open();
+                string checkMaNVQuery = "SELECT COUNT(*) FROM NHANVIEN WHERE MaNV = @MaNV";
+                using (SqlCommand checkCmd = new SqlCommand(checkMaNVQuery, connection))
+                {
+                    checkCmd.Parameters.AddWithValue("@MaNV", maNV);
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    // Nếu mã nhân viên không tồn tại, thông báo và dừng phương thức
+                    if (count == 0)
+                    {
+                        MessageBox.Show("Mã nhân viên không tồn tại trong hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }
+
             // Kiểm tra nếu ô tổng tiền có giá trị lớn hơn 0
             if (decimal.TryParse(txtTongTien.Text, out decimal tongTien) && tongTien > 0)
             {
-                Payment payment = new Payment(txtTongTien.Text);
-                payment.ButtonClicked += Payment_ButtonClicked;
-                payment.Show();
+                // Kiểm tra nếu người dùng chưa chọn giá trị
+                if (cbPayment.SelectedItem == null)
+                {
+                    MessageBox.Show("Vui lòng chọn phương thức thanh toán!");
+                }
+                else
+                {
+                    string selectedPaymentMethod = cbPayment.SelectedItem.ToString();
+
+                    // Kiểm tra nếu giá trị là "Tiền mặt" hoặc "Chuyển khoản"
+                    if (selectedPaymentMethod == "Tiền mặt")
+                    {
+                        // Xử lý thanh toán bằng tiền mặt ở đây
+                        // Kiểm tra mã khách hàng và lấy địa chỉ nếu cần
+                        string soDienThoai = txtSoDienThoai.Text;
+                        string diaChiKH = kiemTraKhachHang(soDienThoai);
+                        if (diaChiKH == null) return;  // Nếu địa chỉ không hợp lệ thì dừng phương thức
+
+                        // Tiến hành xử lý thanh toán tiền mặt 
+                        Cash cash = new Cash(txtTongTien.Text);
+                        cash.ButtonClicked += Cash_buttonClicked;
+                        cash.Show();
+                    }
+                    else if (selectedPaymentMethod == "Chuyển khoản")
+                    {
+                        // Kiểm tra mã khách hàng và lấy địa chỉ nếu cần
+                        string soDienThoai = txtSoDienThoai.Text;
+                        string diaChiKH = kiemTraKhachHang(soDienThoai);
+                        if (diaChiKH == null) return;  // Nếu địa chỉ không hợp lệ thì dừng phương thức
+
+                        // Tiến hành xử lý thanh toán chuyển khoản
+                        BankTransfer payment = new BankTransfer(txtTongTien.Text);
+                        payment.ButtonClicked += Payment_ButtonClicked;
+                        payment.Show();
+                    }
+                }
             }
             else
             {
-                // Hiển thị thông báo cho người dùng nếu tổng tiền không hợp lệ hoặc <= 0
-                MessageBox.Show("Tổng tiền phải lớn hơn 0 để thực hiện thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Chưa thêm đơn hàng để thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+
+
+
+        private void btChonMon_Click(object sender, EventArgs e)
+        {
+            menu = new MenuItems();
+
+            // Đăng ký sự kiện FormClosed để xử lý sau khi form đóng lại
+            menu.FormClosed += menu_FormClosed;
+
+            menu.Show();
+
+
+        }
+
+        private void lbLogout_Click(object sender, EventArgs e)
+        {
+            // Xóa thông tin phiên làm việc
+            User.ClearSession();
+
+            logout();
+            lbUser.Text = "Mã NV: " + maNhanVien + " - " + "Tên NV: " + tenNhanVien;
+
+            // Hiển thị thông báo hoặc thực hiện hành động khác (tuỳ chọn)
+            MessageBox.Show("Bạn đã đăng xuất thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Quay trở lại form đăng nhập (hoặc form chính)
+            Form8 loginForm = new Form8(); // Giả sử bạn có FormLogin
+            loginForm.Show();
+            this.Hide(); // Ẩn form hiện tại
+        }
     }
 }

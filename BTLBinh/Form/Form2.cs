@@ -19,7 +19,7 @@ namespace BTLBinh
         private bool isEditing = false; // Biến để theo dõi trạng thái chỉnh sửa
         private DateTime oldNgayNhap; // Lưu ngày nhập cũ
         private string oldMaNV;
-
+        
         public Form2()
         {
             InitializeComponent();
@@ -278,6 +278,7 @@ namespace BTLBinh
 
                 formChiTiet.Show(); // Hiển thị form chi tiết hóa đơn
 
+                formChiTiet.FormClosed += (formSender, formEventArgs) => function.LoadData();
             }
             else
             {
@@ -288,6 +289,7 @@ namespace BTLBinh
         private void btnLoad_Click(object sender, EventArgs e)
         {
             function.LoadData();
+            
         }
 
         private void oRDERToolStripMenuItem_Click(object sender, EventArgs e)

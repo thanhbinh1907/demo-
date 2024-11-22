@@ -7,7 +7,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Globalization; // Đảm bảo bạn đã thêm namespace này
 using BTLBinh.Class;
 
 namespace BTLBinh
@@ -159,6 +158,25 @@ namespace BTLBinh
             }
 
             return salesDataList;
+        }
+        public DataTable GetChiTietHDTinhTong(string tableName, string columnName, string productCode)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Sử dụng phép nối chuỗi để tạo câu truy vấn SQL
+                string query = $"SELECT * FROM {tableName} WHERE {columnName} = @ProductCode";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Thêm tham số để tránh SQL Injection
+                    command.Parameters.AddWithValue("@ProductCode", productCode);
+
+                    SqlDataAdapter adt = new SqlDataAdapter(command);
+                    DataTable dt = new DataTable();
+                    adt.Fill(dt);
+                    return dt;
+                }
+            }
         }
     }
 }

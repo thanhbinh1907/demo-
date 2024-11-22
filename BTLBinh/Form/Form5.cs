@@ -208,8 +208,31 @@ namespace BTLBinh
                         MessageBox.Show("Mã nhân viên đã tồn tại. Vui lòng nhập mã khác.");
                         return; // Dừng lại nếu mã đã tồn tại
                     }
-                    // Nếu tất cả các TextBox đã được điền, gọi phương thức Add
+
+                    // Thêm nhân viên vào bảng NHANVIEN
                     function.Add();
+
+                    // Thêm mã nhân viên và số điện thoại vào bảng TaiKhoan
+                    string sdt = txtSDT.Text.Trim();
+                    string addAccountQuery = $"INSERT INTO TaiKhoan (MaNV, MatKhau) VALUES ('{maNV}', '{sdt}')";
+                    dataProcess.ExecuteQuery(addAccountQuery); // Sử dụng ExecuteQuery để thực thi câu lệnh
+
+                    // Hiển thị thông báo cho phép nhập email
+                    DialogResult result = MessageBox.Show("Bạn có muốn nhập email không? Nếu bỏ qua, mật khẩu sẽ không được thay đổi.", "Nhập Email", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Tạo một InputBox tạm thời để nhập email
+                        string email = Microsoft.VisualBasic.Interaction.InputBox("Nhập email:", "Nhập Email", "", -1, -1);
+
+                        // Kiểm tra xem người dùng đã nhập email hay không
+                        if (!string.IsNullOrWhiteSpace(email))
+                        {
+                            // Cập nhật email vào cơ sở dữ liệu
+                            string updateEmailQuery = $"UPDATE TaiKhoan SET email = '{email}' WHERE MaNV = '{maNV}'";
+                            dataProcess.ExecuteQuery(updateEmailQuery);
+                        }
+                    }
+
                     MessageBox.Show("Thêm nhân viên thành công!");
 
                     // Thiết lập lại trạng thái
@@ -223,15 +246,22 @@ namespace BTLBinh
                 }
             }
         }
+  
         private void btnXoa_Click(object sender, EventArgs e)
         {
             // Xác nhận trước khi xóa
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không? Điều này sẽ xóa tài khoản liên quan.", "Xác nhận", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                // Gọi phương thức Delete từ Function để xóa sản phẩm
-                string query = $"DELETE FROM NHANVIEN WHERE {function.ColumnMappings["txtMaNV"]} = '{function.TextBoxes[0].Text}'"; // Điều kiện dựa trên ID
-                function.Delete(query);
+                string maNV = function.TextBoxes[0].Text; // Giả sử MaNV ở vị trí đầu tiên
+
+                // Xóa tài khoản liên quan trước
+                string deleteAccountQuery = $"DELETE FROM TAIKHOAN WHERE MaNV = '{maNV}'";
+                dataProcess.ExecuteQuery(deleteAccountQuery); // Xóa tài khoản
+
+                // Xóa nhân viên từ bảng NHANVIEN
+                string deleteEmployeeQuery = $"DELETE FROM NHANVIEN WHERE {function.ColumnMappings["txtMaNV"]} = '{maNV}'"; // Điều kiện dựa trên ID
+                function.Delete(deleteEmployeeQuery);
 
                 // Cập nhật lại dữ liệu trong DataGridView
                 function.LoadData();
@@ -291,6 +321,43 @@ namespace BTLBinh
                 {
                     clbGioiTinh.SetItemChecked(0, false); // Giả sử "Nam" là mục đầu tiên
                 }
+            }
+        }
+
+        private void btnThemGmail_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem có nhân viên nào được chọn không
+            if (dgvDanhSach.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn một nhân viên để thêm email.");
+                return;
+            }
+
+            // Lấy mã nhân viên từ dòng được chọn
+            string maNV = dgvDanhSach.SelectedRows[0].Cells["MaNV"].Value.ToString(); // Sử dụng tên cột thực tế
+
+            // Hiển thị InputBox để nhập email
+            string email = Microsoft.VisualBasic.Interaction.InputBox("Nhập email cho nhân viên:", "Thêm Email", "", -1, -1);
+
+            // Kiểm tra xem email có hợp lệ không (có thể thêm kiểm tra định dạng email nếu cần)
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                // Cập nhật email vào cơ sở dữ liệu
+                string updateEmailQuery = $"UPDATE TAIKHOAN SET email = '{email}' WHERE MaNV = '{maNV}'";
+
+                try
+                {
+                    dataProcess.ExecuteQuery(updateEmailQuery); // Thực hiện câu lệnh cập nhật
+                    MessageBox.Show("Email đã được thêm thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Có lỗi xảy ra: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Email không hợp lệ. Vui lòng thử lại.");
             }
         }
     }

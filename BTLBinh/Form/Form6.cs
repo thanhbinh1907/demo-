@@ -74,11 +74,12 @@ namespace BTLBinh
         }
         private void LoadComboBoxMaSP()
         {
-            string query = "SELECT MaSP FROM SANPHAM"; // Truy vấn lấy mã sản phẩm
+            string query = "SELECT MaSP FROM SANPHAM WHERE SoLuong > 0"; // Lấy sản phẩm còn hàng
+
             try
             {
-                DataTable dt = dataProcess.DataConnect(query);
-                cbbMaSP.DataSource = dt;
+                DataTable dt = dataProcess.DataConnect(query); // Kết nối và lấy dữ liệu
+                cbbMaSP.DataSource = dt; // Gán dữ liệu cho ComboBox
                 cbbMaSP.DisplayMember = "MaSP"; // Hiển thị mã sản phẩm
                 cbbMaSP.ValueMember = "MaSP"; // Giá trị của ComboBox
             }
@@ -89,18 +90,17 @@ namespace BTLBinh
         }
         private void CbbMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Lấy mã sản phẩm đã chọn từ ComboBox
             string maSP = cbbMaSP.SelectedValue?.ToString();
 
             if (!string.IsNullOrWhiteSpace(maSP))
             {
-                // Gọi phương thức để lấy tên sản phẩm, đơn giá và khuyến mãi từ cơ sở dữ liệu
+                // Lấy thông tin sản phẩm
                 var (tenSP, giaSP, khuyenMai) = GetSPDetails(maSP);
 
                 txtTenSP.Text = tenSP; // Cập nhật TextBox với tên sản phẩm
                 txtDonGia.Text = giaSP.ToString("N0"); // Cập nhật TextBox với đơn giá
 
-                // Kiểm tra và cập nhật trạng thái ReadOnly cho txtKhuyenMai
+                // Cập nhật trạng thái ReadOnly cho txtKhuyenMai
                 if (khuyenMai > 0)
                 {
                     txtKhuyenMai.Text = khuyenMai.ToString("N2"); // Cập nhật TextBox với khuyến mãi
@@ -108,7 +108,6 @@ namespace BTLBinh
                 }
                 else
                 {
-                    // Nếu không có khuyến mãi, cho phép người dùng nhập
                     txtKhuyenMai.Text = ""; // Trống ô khuyến mãi
                     txtKhuyenMai.ReadOnly = false; // Không ReadOnly
                 }
