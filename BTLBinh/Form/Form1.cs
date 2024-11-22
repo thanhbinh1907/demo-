@@ -172,6 +172,10 @@ namespace BTLBinh
                     txtMaSp.Text = function.GetNextMa("SANPHAM", "MaSP", "SP");
                 }
 
+                // Thiết lập số lượng mặc định là 0 và chỉ đọc
+                txtSoLuong.Text = "0"; // Gán giá trị mặc định cho số lượng
+                txtSoLuong.ReadOnly = true; // Ngăn không cho người dùng thay đổi số lượng
+
                 isEditing = true; // Đánh dấu là đang ở chế độ nhập thông tin
                 btnChonAnh.Enabled = true;
             }
@@ -256,7 +260,9 @@ namespace BTLBinh
 
                 // Đặt đường dẫn hình ảnh cũ vào biến tạm
                 imagePath = function.GetOldImagePath(); // Thêm phương thức này trong Function để lấy đường dẫn hình ảnh cũ
+                txtSoLuong.ReadOnly = true;
             }
+
             else
             {
                 // Kiểm tra xem thông tin có khác không
@@ -278,6 +284,7 @@ namespace BTLBinh
                 {
                     hasChanged = true;
                 }
+                txtSoLuong.ReadOnly = true;
 
                 if (hasChanged)
                 {
